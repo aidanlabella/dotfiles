@@ -1,0 +1,26 @@
+# Sample profile by groups keys
+
+a 14e356
+g fkeys ff00ff
+g modifiers ff00ff
+g arrows 0B57A4
+g numeric e31414
+
+k h 0B57A4 
+k j 0B57A4 
+k k 0B57A4 
+k l 0B57A4  
+
+k 1 e31414
+k 2 e31414
+k 3 e31414
+k 4 e31414
+k 5 e31414
+k 6 e31414
+k 7 e31414
+k 8 e31414
+k 9 e31414
+k 0 e31414
+
+c # Commit changes
+                    
