@@ -11,8 +11,8 @@ then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
 export PATH
-
-PS1="\e[01;32m[\u@\h \e[01;34m\]\\W\e[01;32m\]]\e[01;34m\]\\$ \e[m"
+export PS1="\[\e[01;32m\]\u\[\e[m\]\[\e[01;32m\]@\[\e[m\]\[\e[01;32m\]\h\[\e[m\] \[\e[01;34m\]\W\[\e[m\] \[\e[01;37m\]\\$\[\e[m\] "
+#PS1="\[\e[01;32m\][\u@\h \[\e[01;34m\]\]\\W\[\e[01;32m\]]\e\[[01;34m\]\\$ \[\e[m\] "
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
@@ -39,7 +39,7 @@ alias c='clear'
 
 # non-SUSE-Specific
 
-alias la='ls -a'
+alias la='ls -la'
 alias ..='cd ..'
 alias cd..='cd ..'
 alias ll='ls -l'
