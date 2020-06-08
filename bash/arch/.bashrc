@@ -11,7 +11,7 @@ then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
 export PATH
-export PS1="\[\e[01;37m\][\[\e[01;32m\]\u\[\e[m\]\[\e[01;32m\]@\[\e[m\]\[\e[01;32m\]\h\[\e[m\] \[\e[01;34m\]\W\[\e[01;37m\]\\[\e[01;37m\]]\[\e[01;37m\]\$\[\e[m\] "
+export PS1="\[\e[01;96m\][\[\e[01;32m\]\u\[\e[m\]\[\e[01;32m\]@\[\e[m\]\[\e[01;32m\]\h\[\e[m\] \[\e[01;34m\]\W\[\e[01;37m\]\\[\e[01;96m\]]\[\e[01;37m\]\$\[\e[m\] "
 #PS1="\[\e[01;32m\][\u@\h \[\e[01;34m\]\]\\W\[\e[01;32m\]]\e\[[01;34m\]\\$ \[\e[m\] "
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
@@ -45,8 +45,6 @@ alias cd..='cd ..'
 alias ll='ls -l'
 
 # ARCH-Specific
-
-alias vi='vim'
 
 #export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.6.10-0.fc31.x86_64
 
