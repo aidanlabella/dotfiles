@@ -37,14 +37,15 @@ alias c='clear'
 
 # non-SUSE-Specific
 
-alias la='ls -a'
+alias la='ls -la'
+alias lsa='ls -a'
 alias ..='cd ..'
 alias cd..='cd ..'
 alias ll='ls -l'
 
-# ARCH-Specific
+# Gentoo-specific
+alias emerge-up='sudo emerge -uDU --ask --keep-going --with-bdeps=y @world'
 
-alias vi='vim'
 
 #export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.6.10-0.fc31.x86_64
 

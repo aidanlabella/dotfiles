@@ -1,26 +1,27 @@
 # Sample profile by groups keys
 
-a 7d35bd
-g fkeys 0330fc
-g modifiers 0330fc
+a ff00ff
+g fkeys 14e356
+g modifiers e31414
 g arrows 14e356
-g numeric e31414
+g numeric 0330fc
+g functions e31414
 
 k h 14e356
 k j 14e356
 k k 14e356
 k l 14e356
 
-k 1 e31414
-k 2 e31414
-k 3 e31414
-k 4 e31414
-k 5 e31414
-k 6 e31414
-k 7 e31414
-k 8 e31414
-k 9 e31414
-k 0 e31414
+k 1 0330fc
+k 2 0330fc
+k 3 0330fc
+k 4 0330fc
+k 5 0330fc
+k 6 0330fc
+k 7 0330fc
+k 8 0330fc
+k 9 0330fc
+k 0 0330fc
 
 c # Commit changes
                     
