@@ -38,6 +38,9 @@ set tabstop=4
 set ts=4 sw=4
 set laststatus=2
 set number
+set guifont=Monospace:h11
 
 map <M-g> :Magit <CR>
 map <M-t> :NERDTree <CR>
+
+autocmd BufEnter * lcd %:p:h
