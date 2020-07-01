@@ -33,6 +33,7 @@ alias csr='cd ~/RIT/CSResearch/D2S2/ngafid2*'
 alias q='exit'
 alias cst='cd ~/RIT/CSCI262/Homew*'
 alias csrs='cd ~/RIT/CSResearch/D2S2/ngafid2.0/src/main/java/org/ngafid'
+alias tmux='TERM=xterm-256color tmux'
 alias c='clear'
 
 # non-SUSE-Specific
@@ -52,3 +53,7 @@ alias emerge-up='sudo emerge -uDU --ask --keep-going --with-bdeps=y @world'
 #Env. Vars 
 
 source ~/RIT/CSResearch/D2S2/ngafid2.0/init_env.sh
+
+#Welcome Message
+clear
+echo "Welcome to Gentoo GNU/Linux on Aidan's Desktop"
