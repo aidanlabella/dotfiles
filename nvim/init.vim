@@ -19,13 +19,13 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Initialize plugin system
 call plug#end()
 
-let g:vim_lsp_java = {
-  \ 'eclipse_jdtls' : {
-    \ 'repository': expand('~/eclipse/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository'),
-    \ 'config': 'config_linux',
-    \ 'workspace': expand('$WORKSPACE'),
-  \ },
-\ }
+"let g:vim_lsp_java = {
+"  \ 'eclipse_jdtls' : {
+"    \ 'repository': expand('~/eclipse/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository'),
+"    \ 'config': 'config_linux',
+"    \ 'workspace': expand('$WORKSPACE'),
+"  \ },
+"\ }
 
 let hostname=system('hostname -s | tr -d "\n"')
 let username=system('whoami | tr -d "\n"')
@@ -38,9 +38,6 @@ set tabstop=4
 set ts=4 sw=4
 set laststatus=2
 set number
-set guifont=Monospace:h11
 
 map <M-g> :Magit <CR>
 map <M-t> :NERDTree <CR>
-
-autocmd BufEnter * lcd %:p:h
