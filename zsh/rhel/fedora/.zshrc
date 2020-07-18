@@ -3,6 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/alabella/.oh-my-zsh"
+export JAVA_HOME="/usr/lib/jvm/java-11-openjdk"
 
 
 alias ls='ls --color=auto'
@@ -43,7 +44,7 @@ source ~/RIT/CSResearch/D2S2/ngafid2.0/init_env.sh
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="spaceship"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 SPACESHIP_HOST_SHOW=always
 SPACESHIP_HOST_PREFIX=@
@@ -180,3 +181,5 @@ source $ZSH/oh-my-zsh.sh
 #
 echo "Fedora $(uname -o) $(uname -r) on Aidan's PC"
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
