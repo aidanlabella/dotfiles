@@ -1,0 +1,37 @@
+{
+	"version": "1.0",
+	"profiles": [{
+		"name": "laptop",
+		"description": "Set scaling to 1.25",
+		"scaling": 1.25,
+		"cursor": {
+			"size": 32
+		},
+		"panels": [{
+			"groups": ["PlasmaViews", "Panel 2", "Horizontal1920"],
+			"thickness": 50
+		}],
+		"widgets": [{
+			"groups": ["Containments", 2, "Applets", 22, "Configuration", "General"],
+			"key": "clock_maxheight",
+			"value": 48
+		}]
+	},
+	{
+		"name": "monitor",
+		"description": "Set scaling to 1.0",
+		"scaling": 1.0,
+		"cursor": {
+			"size": 24
+		},
+		"panels": [{
+			"groups": ["PlasmaViews", "Panel 2", "Horizontal1920"],
+			"thickness": 38
+		}],
+		"widgets": [{
+			"groups": ["Containments", 2, "Applets", 22, "Configuration", "General"],
+			"key": "clock_maxheight",
+			"value": 36
+		}]
+	}]
+}

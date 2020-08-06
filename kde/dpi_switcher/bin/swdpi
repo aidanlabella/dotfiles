@@ -1,0 +1,18 @@
+#!/bin/bash
+
+if  [ $1 == 'think' ]
+then
+	echo Switching to hidpi display -- 1.25:1
+	echo Remember to restart konsole!
+	/usr/bin/dpiswitch --config /home/alabella/scripts/dpi_sw/profiles/profile.json --profile laptop 
+
+elif [ $1 = 'monitor' ]
+then
+	echo Switching to external monitor -- 1:1
+	echo Remember to restart konsole!
+	/usr/bin/dpiswitch --config /home/alabella/scripts/dpi_sw/profiles/profile.json --profile monitor 
+else
+	echo Unrecognized profile $1
+fi
+
+
