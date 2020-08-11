@@ -39,13 +39,14 @@ values."
      ;; ----------------------------------------------------------------
      helm
      auto-completion
+	 lsp
      evil-commentary
      ;; better-defaults
      emacs-lisp
      git
      ;; markdown
      ;; org
-     java
+	 (java :variables java-backend 'lsp)
      themes-megapack
      spell-checking
      syntax-checking
@@ -134,11 +135,11 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Source Code Pro"
+   dotspacemacs-default-font '("NotoMono Nerd Font"
                                :size 16
                                :weight normal
                                :width normal
-                               :powerline-scale 1.1)
+                               :powerline-scale 1.0)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The key used for Emacs commands (M-x) (after pressing on the leader key).
@@ -389,7 +390,7 @@ you should place your code here."
      (head3-bg . "#ffffff")
      (keyword . "#ff79c6")
      (mat . "#ffffff")
-     (meta . "#86dc2f")
+     (meta . "#6272a4")
      (str . "#f1fa8c")
      (type . "#8be9fd")
      (var . "#7590db")))))
@@ -398,4 +399,26 @@ you should place your code here."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ (dolist (mode-iter '(c-mode c++-mode glsl-mode java-mode javascript-mode rust-mode))
+
+  (font-lock-add-keywords
+
+    mode-iter
+
+    '(("\\([~^&\|!<>=,.\\+*/%-]\\)" 0 'font-lock-operator-face keep)))
+
+  (font-lock-add-keywords
+
+    mode-iter
+
+    '(("\\([\]\[}{)(:;]\\)" 0 'font-lock-delimit-face keep)))
+
+  ;; functions
+
+  (font-lock-add-keywords
+
+    mode-iter
+
+    '(("\\([_a-zA-Z][_a-zA-Z0-9]*\\)\s*(" 1 'font-lock-function-name-face keep))))
  )
+

@@ -1,23 +1,24 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/alabella/.oh-my-zsh"
-export JAVA_HOME="/usr/lib/jvm/java-11-openjdk"
+export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-11.0.8.10-2.fc32.x86_64"
+export TERM=xterm-256color
 
 
 alias ls='ls --color=auto'
-alias cs='cd ~/RIT/CSCI250'
-alias csp='cd ~/RIT/CSCI243/Proj*/CSCI243-FinalProject/'
+alias dff='cd ~/dotfiles'
 alias cemacs='emacs -nw'
 alias cem='emacs -nw'
 alias styx='ssh apl1341@styx.cs.rit.edu'
-alias hp='~/Docume*/perf*'
-alias bal='~/Docume*/balan*'
-alias pst='~/Docume*/stat*'
-alias swenp='cd ~/IntelliJProjects/team-project*/src/main/java/com/webcheckers'
-alias swenpmod='cd ~/IntelliJProjects/team-project-2191-swen-261-12-b-team/src/main/java/com/webcheckers/model'
-alias cshw='cd ~/RIT/CSCI250/Homew*'
 alias csr='cd ~/RIT/CSResearch/D2S2/ngafid2*'
 alias q='exit'
 alias cst='cd ~/RIT/CSCI262/Homew*'

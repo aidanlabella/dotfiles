@@ -16,6 +16,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'prabirshrestha/async.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ryanoasis/vim-devicons'
+Plug 'liuchengxu/vim-which-key'
 
 " Initialize plugin system
 call plug#end()
