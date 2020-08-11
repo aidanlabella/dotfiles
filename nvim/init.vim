@@ -17,6 +17,8 @@ Plug 'prabirshrestha/async.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ryanoasis/vim-devicons'
 Plug 'liuchengxu/vim-which-key'
+Plug 'mhinz/vim-startify'
+Plug 'vim-ctrlspace/vim-ctrlspace'
 
 " Initialize plugin system
 call plug#end()
@@ -34,13 +36,17 @@ let username=system('whoami | tr -d "\n"')
 let g:airline_section_y = '%{username}@%{hostname}'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:CtrlSpaceDefaultMappingKey = "<C-space> "
 
 colorscheme dracula
+set guifont=NotoMono\ Nerd\ Font:h10
 set tabstop=4
 set ts=4 sw=4
 set laststatus=2
 set number
+set hidden
+hi Normal ctermbg=NONE
 
 map <M-g> :Magit <CR>
-map <M-t> :NERDTree <CR>
+map <M-t> :NERDTreeToggle <CR>
 map <M-f> :FZF <CR>
