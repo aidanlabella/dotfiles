@@ -18,25 +18,16 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ryanoasis/vim-devicons'
 Plug 'liuchengxu/vim-which-key'
 Plug 'mhinz/vim-startify'
-Plug 'vim-ctrlspace/vim-ctrlspace'
+Plug 'jceb/vim-orgmode'
 
 " Initialize plugin system
 call plug#end()
-
-"let g:vim_lsp_java = {
-"  \ 'eclipse_jdtls' : {
-"    \ 'repository': expand('~/eclipse/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository'),
-"    \ 'config': 'config_linux',
-"    \ 'workspace': expand('$WORKSPACE'),
-"  \ },
-"\ }
 
 let hostname=system('hostname -s | tr -d "\n"')
 let username=system('whoami | tr -d "\n"')
 let g:airline_section_y = '%{username}@%{hostname}'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:CtrlSpaceDefaultMappingKey = "<C-space> "
 
 colorscheme dracula
 set guifont=NotoMono\ Nerd\ Font:h10
@@ -45,8 +36,8 @@ set ts=4 sw=4
 set laststatus=2
 set number
 set hidden
-hi Normal ctermbg=NONE
 
-map <M-g> :Magit <CR>
-map <M-t> :NERDTreeToggle <CR>
-map <M-f> :FZF <CR>
+cnoreabbrev W w
+cnoreabbrev Q q
+
+source ~/dotfiles/nvim/keys.vim
