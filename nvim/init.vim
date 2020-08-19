@@ -37,6 +37,10 @@ set laststatus=2
 set number
 set hidden
 
+let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+set termguicolors
+
 cnoreabbrev W w
 cnoreabbrev Q q
 
