@@ -19,6 +19,8 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'liuchengxu/vim-which-key'
 Plug 'mhinz/vim-startify'
 Plug 'jceb/vim-orgmode'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Initialize plugin system
 call plug#end()
