@@ -27,7 +27,7 @@ call plug#end()
 
 let hostname=system('hostname -s | tr -d "\n"')
 let username=system('whoami | tr -d "\n"')
-let g:airline_section_y = '%{username}@%{hostname}'
+let g:airline_section_x = '%{username}@%{hostname}'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
