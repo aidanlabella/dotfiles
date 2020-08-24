@@ -29,6 +29,12 @@ let g:which_key_map['t'] = {
       \ 'T' : ['gT'    , 'one tab backwards']            ,
 \ }
 
+let g:which_key_map['o'] = {
+      \ 'name' : '+outline (tagbar)' ,
+      \ 'o' : [':TagbarToggle'     , 'open outline']          ,
+      \ 's' : [':TagbarShowTag'     , 'show tag']         ,
+\ }
+
 let g:which_key_map['w'] = {
       \ 'name' : '+windows' ,
       \ 'w' : ['<C-W>w'     , 'other-window']          ,
