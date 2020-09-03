@@ -29,6 +29,7 @@ alias q='exit'
 alias cst='cd ~/RIT/CSCI262/Homew*'
 alias csrs='cd ~/RIT/CSResearch/D2S2/ngafid2.0/src/main/java/org/ngafid'
 alias c='clear'
+alias dff='cd ~/dotfiles'
 
 # non-SUSE-Specific
 
