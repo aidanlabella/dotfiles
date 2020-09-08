@@ -22,6 +22,7 @@ Plug 'jceb/vim-orgmode'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'majutsushi/tagbar'
+Plug 'norcalli/nvim-colorizer.lua'
 
 " Initialize plugin system
 call plug#end()
@@ -52,6 +53,8 @@ set hidden
 let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
 set termguicolors
+
+lua require'colorizer'.setup()
 
 cnoreabbrev W w
 cnoreabbrev Q q
