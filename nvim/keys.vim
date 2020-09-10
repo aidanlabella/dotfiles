@@ -25,8 +25,9 @@ let g:which_key_map['q'] = {
 let g:which_key_map['t'] = {
       \ 'name' : '+tabs' ,
       \ 'n' : [':tabnew'     , 'open new tab']          ,
-      \ 't' : ['gt'     , 'one tab forward']         ,
-      \ 'T' : ['gT'    , 'one tab backwards']            ,
+      \ 't' : ['gt'     , 'switch tabs']         ,
+      \ 'l' : ['gt'     , 'one tab forward']         ,
+      \ 'h' : ['gT'    , 'one tab backwards']            ,
 \ }
 
 let g:which_key_map['o'] = {
