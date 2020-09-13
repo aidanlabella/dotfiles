@@ -5,6 +5,15 @@ nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
 nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
 
 let g:which_key_map['W'] = [ 'w'                                  , 'write' ]
+let g:which_key_map['1'] = [ ':1tabnext'  , 'tab 1' ]
+let g:which_key_map['2'] = [ ':2tabnext'  , 'tab 2' ]
+let g:which_key_map['3'] = [ ':3tabnext'  , 'tab 3' ]
+let g:which_key_map['4'] = [ ':4tabnext'  , 'tab 4' ]
+let g:which_key_map['5'] = [ ':5tabnext'  , 'tab 5' ]
+let g:which_key_map['6'] = [ ':6tabnext'  , 'tab 6' ]
+let g:which_key_map['7'] = [ ':7tabnext'  , 'tab 7' ]
+let g:which_key_map['8'] = [ ':8tabnext'  , 'tab 8' ]
+let g:which_key_map['9'] = [ ':9tabnext'  , 'tab 9' ]
 
 let g:which_key_map['f'] = {
       \ 'name' : '+files' ,
