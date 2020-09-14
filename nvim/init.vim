@@ -24,8 +24,9 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'majutsushi/tagbar'
 Plug 'norcalli/nvim-colorizer.lua'
-Plug 'pacha/vem-tabline'
 Plug 'junegunn/gv.vim'
+Plug 'rbgrouleff/bclose.vim'
+Plug 'francoiscabrol/ranger.vim'
 
 " Initialize plugin system
 call plug#end()
@@ -34,9 +35,17 @@ let hostname=system('hostname -s | tr -d "\n"')
 let username=system('whoami | tr -d "\n"')
 let g:airline_section_x = '%{username}@%{hostname}'
 
-let g:vem_tabline_show_number = 'index'
-
+let g:airline#extensions#tabline#enabled = 1 
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#show_tab_nr = 1
+let g:airline#extensions#tabline#tab_nr_type= 2
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#show_tab_type = 1
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+
+let g:NERDTreeHijackNetrw = 0
+let g:ranger_map_keys = 0
 
 colorscheme dracula
 set guifont=NotoMono\ Nerd\ Font:h10

@@ -18,6 +18,8 @@ let g:which_key_map['9'] = [ ':9tabnext'  , 'tab 9' ]
 let g:which_key_map['f'] = {
       \ 'name' : '+files' ,
       \ 'f' : ['FZF'     , 'find file']    ,
+      \ 'r' : ['RangerCurrentDirectory'     , 'ranger']    ,
+      \ 'R' : ['Ranger'     , 'ranger ~']    ,
       \ 't' : ['NERDTreeToggle'     , 'file tree']    ,
       \ 'e' : ['Explore'     , 'explore files']    ,
 \ }
