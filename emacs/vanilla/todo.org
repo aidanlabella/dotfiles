@@ -3,19 +3,21 @@
   CLOCK: [2020-09-16 Wed 23:27]--[2020-09-16 Wed 23:30] =>  0:03
   :END:
   * Editor
-    [ ] Fix syntax highlighting
-    [ ] fix lsp bindings
-    [ ] install lsp for javascript and others
-    *** Keybindings
-	[ ] git
-	[ ] window managment
-	[ ] file mgmt
-	[ ] buffer mgmt
-    *** Extensions
-	[ ] better finder
-	[ ] more icons
-	[ ] better evil support
-	[ ] flycheck
+    - [ ] Fix syntax highlighting
+    - [ ] fix lsp bindings
+    - [-] install lsp for javascript and others
+    *** TODO Keybindings
+      - [X] git
+      - [X] window managment
+      - [ ] file mgmt
+      - [X] buffer mgmt
+      *** Extensions
+      - [ ] better finder
+      - [ ] more icons
+      - [X] better evil support
+	- [X] evil collection
+	- [X] C-u support!
+      - [ ] flycheck
 	
 	
 

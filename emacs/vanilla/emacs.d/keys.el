@@ -28,7 +28,8 @@
 ;File managment
 (define-leader-keys 'file-managment "f"
   "t" 'treemacs
-  "f" 'helm-find-files
+  "f" 'counsel-fzf
+  "F" 'counsel-find-file
   )
 
 ;Window managment
@@ -44,8 +45,50 @@
 (define-leader-keys 'tab-managment "t"
   "h" 'centaur-tabs-backward 
   "l" 'centaur-tabs-forward
+  "c" 'centaur-tabs--kill-this-buffer-dont-ask
   )
 
-(global-set-key (kbd "	") 'company-complete)
+;comments
+(define-leader-keys 'commenter "c"
+  "c" 'evilnc-comment-or-uncomment-lines
+  "r" 'comment-or-uncomment-region
+  )
+
+;Git
+(define-leader-keys 'git-managment "g"
+  "g" 'magit
+  "r" 'magit-reflog
+  "c" 'magit-commit
+  "P" 'magit-pull
+  "f" 'magit-fetch
+  "p" 'magit-push
+  "C" 'magit-checkout
+  "l" 'magit-log
+  )
+
+;buffer managment
+(define-leader-keys 'buffer-managment "b"
+  "k" 'kill-buffer
+  "s" 'switch-to-buffer
+  "n" 'next-buffer
+  "p" 'previous-buffer
+  )
+
+;project managment
+(define-leader-keys 'project-managment "p"
+  "a" 'projectile-add-known-project
+  "p" 'projectile-switch-project
+  "n" 'projectile-next-project-buffer
+  "f" 'projectile-find-file
+  )
+
+;qutting/saving
+(define-leader-keys 'qutting "q"
+  "q" 'quit-window
+  "Q" 'kill-emacs
+  "m" 'exit-minibuffer
+  )
+
+(global-set-key (kbd "\t") 'company-complete)
 
 (provide 'keys)
