@@ -1,0 +1,19 @@
+* Emacs Todos
+  ** Editor
+    [ ] Fix syntax highlighting
+    [ ] fix lsp bindings
+    [ ] install lsp for javascript and others
+    *** Keybindings
+	[ ] git
+	[ ] window managment
+	[ ] file mgmt
+	[ ] buffer mgmt
+    *** Extensions
+	[ ] better finder
+	[ ] more icons
+	[ ] better evil support
+	[ ] flycheck
+	
+	
+
+
