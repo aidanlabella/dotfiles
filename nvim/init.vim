@@ -47,6 +47,8 @@ let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:NERDTreeHijackNetrw = 0
 let g:ranger_map_keys = 0
 
+let g:javascript_plugin_jsdoc = 1
+
 colorscheme dracula
 set guifont=NotoMono\ Nerd\ Font:h10
 set tabstop=4
@@ -55,6 +57,17 @@ set laststatus=2
 set number
 set hidden
 set timeoutlen=250
+
+" use <tab> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
 
 let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
