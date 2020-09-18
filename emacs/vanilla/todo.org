@@ -3,8 +3,8 @@
   CLOCK: [2020-09-16 Wed 23:27]--[2020-09-16 Wed 23:30] =>  0:03
   :END:
   * Editor
-    - [ ] Fix syntax highlighting
-    - [ ] fix lsp bindings
+    - [ ] better syntax highlighting (especially java and js!)
+    - [X] fix lsp bindings
     - [-] install lsp for javascript and others
     *** TODO Keybindings
       - [X] git
@@ -14,11 +14,9 @@
       *** Extensions
       - [ ] better finder
       - [ ] more icons
-      - [X] better evil support
+      - [-] better evil support
+	- [ ] solve the problem where it loads so slow
 	- [X] evil collection
 	- [X] C-u support!
       - [ ] flycheck
-	
-	
-
-
+      - [ ] allow spc commands on dashboard
