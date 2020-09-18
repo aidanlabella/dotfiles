@@ -51,6 +51,7 @@
 (projectile-mode +1)
 (doom-modeline-mode 1)
 (evil-mode 1)
+ (show-paren-mode 1)
 (which-key-mode)
 (which-key-setup-side-window-bottom)
 (helm-icons-enable)
@@ -78,6 +79,8 @@
 (setq centaur-tabs-set-icons t)
 (setq centaur-tabs-height 38)
 (setq centaur-tabs-set-modified-marker t)
+
+(setq-default tab-width 4)
 
 (setq dashboard-startup-banner 'logo)
 (setq dashboard-items '((recents  . 5)
