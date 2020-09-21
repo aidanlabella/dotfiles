@@ -13,7 +13,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'pangloss/vim-javascript'
 Plug 'prabirshrestha/async.vim'
-Plug 'autozimu/LanguageClient-neovim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ryanoasis/vim-devicons'
 Plug 'liuchengxu/vim-which-key'
@@ -27,12 +26,27 @@ Plug 'junegunn/gv.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'francoiscabrol/ranger.vim'
 
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+
 " Initialize plugin system
 call plug#end()
+
+function! StartifyEntryFormat()
+        return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
+endfunction
 
 let hostname=system('hostname -s | tr -d "\n"')
 let username=system('whoami | tr -d "\n"')
 let g:airline_section_x = '%{username}@%{hostname}'
+
+if exists('*complete_info')
+  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else
+  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+endif
 
 let g:airline#extensions#tabline#enabled = 1 
 let g:airline_powerline_fonts = 1
@@ -48,6 +62,8 @@ let g:ranger_map_keys = 0
 
 let g:javascript_plugin_jsdoc = 1
 
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
 colorscheme dracula
 set guifont=NotoMono\ Nerd\ Font:h10
 set tabstop=4
@@ -55,7 +71,9 @@ set ts=4 sw=4
 set laststatus=2
 set number
 set hidden
+set updatetime=300
 set timeoutlen=250
+set cmdheight=2
 
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
