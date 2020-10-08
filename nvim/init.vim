@@ -65,6 +65,7 @@ let g:javascript_plugin_jsdoc = 1
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
+set t_Co=256
 colorscheme dracula
 set guifont=NotoMono\ Nerd\ Font:h10
 set tabstop=4
@@ -90,6 +91,7 @@ inoremap <silent><expr> <Tab>
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+let NERDTreeStatusline="%{matchstr(getline('.'), '\\s\\zs\\w\\(.*\\)')}"
 
 let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
