@@ -49,6 +49,12 @@ else
   inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 endif
 
+set cursorline
+hi cursorline cterm=none term=none
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
+highlight CursorLine guibg=#303000 ctermbg=234
+
 let g:airline#extensions#tabline#enabled = 1 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#show_tab_nr = 1
@@ -67,7 +73,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 set t_Co=256
 colorscheme dracula
-set guifont=NotoMono\ Nerd\ Font:h10
+set guifont=UbuntuMono\ Nerd\ Font\ Mono:h12
 set tabstop=4
 set ts=4 sw=4
 set laststatus=2
@@ -75,7 +81,6 @@ set number
 set hidden
 set updatetime=300
 set timeoutlen=250
-set cmdheight=2
 
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
