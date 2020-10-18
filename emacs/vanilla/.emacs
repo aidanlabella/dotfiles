@@ -10,7 +10,7 @@
  '(doom-modeline-mode t)
  '(inhibit-startup-screen t)
  '(package-selected-packages
-   '(meghanada spacemacs-theme aggressive-indent flycheck lsp-ui helm-company counsel-projectile evil-nerd-commenter counsel ivy-searcher evil-org ivy-fuz dashboard ivy-explorer evil-collection git-gutter lsp-java javap-mode projectile lsp-mode company evil-magit magit helm-icons helm god-mode which-key centaur-tabs treemacs-all-the-icons all-the-icons-ivy treemacs-evil evil doom-modeline doom dracula-theme gnu-elpa)))
+   '(meghanada spacemacs-theme org-evil aggressive-indent flycheck lsp-ui helm-company helm-projectile counsel-projectile evil-nerd-commenter counsel ivy-searcher evil-org ivy-fuz dashboard ivy-explorer evil-collection git-gutter lsp-java javap-mode projectile lsp-mode company evil-magit magit helm-icons helm god-mode which-key centaur-tabs treemacs-all-the-icons all-the-icons-ivy treemacs-evil evil doom-modeline doom dracula-theme gnu-elpa)))
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
