@@ -14,6 +14,7 @@ set number
 set hidden
 set updatetime=300
 set timeoutlen=250
+set mouse=a
 
 cnoreabbrev W w
 cnoreabbrev Q q
