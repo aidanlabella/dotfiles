@@ -11,4 +11,5 @@ let g:which_key_map.l = {
       \ 't' : ['<Plug>(coc-type-definition)' , 'type definition'],
       \ 'i' : ['<Plug>(coc-implementation)'  , 'implementation'],
       \ 'r' : ['<Plug>(coc-references)', 'references'],
+      \ 'f' : [':CocFix', 'quick fix'],
       \ }
