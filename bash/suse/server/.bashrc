@@ -1,36 +1,53 @@
-# Sample .bashrc for SuSE Linux
-# Copyright (c) SuSE GmbH Nuernberg
+# .bashrc
 
-# There are 3 different types of shells in bash: the login shell, normal shell
-# and interactive shell. Login shells read ~/.profile and interactive shells
-# read ~/.bashrc; in our setup, /etc/profile sources ~/.bashrc - thus all
-# settings made here will also take effect in a login shell.
-#
-# NOTE: It is recommended to make language settings in ~/.profile rather than
-# here, since multilingual X sessions would not work properly if LANG is over-
-# ridden in every subshell.
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
 
-# Some applications read the EDITOR variable to determine your favourite text
-# editor. So uncomment the line below and enter the editor of your choice :-)
-#export EDITOR=/usr/bin/vim
-#export EDITOR=/usr/bin/mcedit
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+export PS1="\[\e[01;92m\][\[\e[01;32m\]\u\[\e[m\]\[\e[01;32m\]@\[\e[m\]\[\e[01;32m\]\h\[\e[m\] \[\e[01;34m\]\W\[\e[01;37m\]\\[\e[01;92m\]]\[\e[01;34m\]\$\[\e[m\] "
+#PS1="\[\e[01;32m\][\u@\h \[\e[01;34m\]\]\\W\[\e[01;32m\]]\e\[[01;34m\]\\$ \[\e[m\] "
 
-# For some news readers it makes sense to specify the NEWSSERVER variable here
-#export NEWSSERVER=your.news.server
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
 
-# If you want to use a Palm device with Linux, uncomment the two lines below.
-# For some (older) Palm Pilots, you might need to set a lower baud rate
-# e.g. 57600 or 38400; lowest is 9600 (very slow!)
-#
-#export PILOTPORT=/dev/pilot
-#export PILOTRATE=115200
+# User specific aliases and functions
 
-test -s ~/.alias && . ~/.alias || true
+alias ls='ls --color=auto'
+alias cs='cd ~/RIT/CSCI250'
+alias csp='cd ~/RIT/CSCI243/Proj*/CSCI243-FinalProject/'
 alias cemacs='emacs -nw'
 alias cem='emacs -nw'
 alias styx='ssh apl1341@styx.cs.rit.edu'
+alias hp='~/Docume*/perf*'
+alias bal='~/Docume*/balan*'
+alias pst='~/Docume*/stat*'
+alias swenp='cd ~/IntelliJProjects/team-project*/src/main/java/com/webcheckers'
+alias swenpmod='cd ~/IntelliJProjects/team-project-2191-swen-261-12-b-team/src/main/java/com/webcheckers/model'
+alias cshw='cd ~/RIT/CSCI250/Homew*'
+alias csr='cd /mnt/ngafid/'
 alias q='exit'
+alias cst='cd ~/RIT/CSCI262/Homew*'
+alias csrs='cd ~/RIT/CSResearch/D2S2/ngafid2.0/src/main/java/org/ngafid'
 alias c='clear'
+
+# non-SUSE-Specific
+
+alias la='ls -la'
+alias ..='cd ..'
+alias cd..='cd ..'
+alias ll='ls -l'
+
+# ARCH-Specific
+
+#export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.6.10-0.fc31.x86_64
+
 #Env. Vars 
 
-
+source /mnt/ngafid/ngafid2.0/init_env.sh
