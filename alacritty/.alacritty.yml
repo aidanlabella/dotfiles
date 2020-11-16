@@ -12,14 +12,14 @@
   # available, otherwise `xterm-256color` is used.
   #TERM: alacritty
 
-#window:
+window:
   # Window dimensions (changes require restart)
   #
   # Specified in number of columns/lines, not pixels.
   # If both are `0`, this setting is ignored.
-  #dimensions:
-  #  columns: 0
-  #  lines: 0
+  dimensions:
+    columns: 180
+    lines: 45
 
   # Window position (changes require restart)
   #
@@ -87,7 +87,6 @@
   #multiplier: 3
 
 # Font configuration
-
 font:
   normal:
     family: Consolas
@@ -808,4 +807,8 @@ background_opacity: 0.96
   #log_level: Warn
 
   # Print all received window events.
-  #print_events: false
+  
+#print_events: false
+#
+#
+#
