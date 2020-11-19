@@ -190,7 +190,8 @@ _systemctl_unit_state() {
   typeset -gA _sys_unit_state
   _sys_unit_state=( $(__systemctl list-unit-files "$PREFIX*" | awk '{print $1, $2}') ) }
 
-echo "Gentoo $(uname -o) $(uname -r) on Aidan's PC"
+#echo "Gentoo $(uname -o) $(uname -r) on Aidan's PC"
+pfetch
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

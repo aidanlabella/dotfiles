@@ -188,7 +188,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-echo "Arch $(uname -o) $(uname -r) on Aidan's ThinkPad T480s"
+#echo "Arch $(uname -o) $(uname -r) on Aidan's ThinkPad T480s"
+pfetch
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
