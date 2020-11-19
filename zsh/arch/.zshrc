@@ -30,6 +30,8 @@ alias cst='cd ~/RIT/CSCI262/Homew*'
 alias csrs='cd ~/RIT/CSResearch/D2S2/ngafid2.0/src/main/java/org/ngafid'
 alias c='clear'
 alias dff='cd ~/dotfiles'
+alias gloo='git log --oneline'
+alias ngsql='mysql -u root -p ngafid'
 
 # non-SUSE-Specific
 
