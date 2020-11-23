@@ -29,7 +29,10 @@ alias q='exit'
 alias cst='cd ~/RIT/CSCI262/Homew*'
 alias csrs='cd ~/RIT/CSResearch/D2S2/ngafid2.0/src/main/java/org/ngafid'
 alias c='clear'
+alias t='tmux'
 alias dff='cd ~/dotfiles'
+alias gloo='git log --oneline'
+alias ngsql='mysql -u root -p ngafid'
 
 # non-SUSE-Specific
 
@@ -186,7 +189,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-echo "Arch $(uname -o) $(uname -r) on Aidan's ThinkPad T480s"
+#echo "Arch $(uname -o) $(uname -r) on Aidan's ThinkPad T480s"
+pfetch
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
