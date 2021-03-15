@@ -1,2 +1,2 @@
-# LinuxConfigs
-Configuration (*.rc) files for POSIX-COMPLIANT/Unix operating systems (particularly GNU/Linux).
+# Dotfiles
+Configuration (*.rc) files for unix-like OSes such as GNU/Linux and Apple's macOS.
