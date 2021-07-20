@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/alabella/.oh-my-zsh"
+export ZSH="/home/aidan/.oh-my-zsh"
 export TERM=xterm-256color
 
 
@@ -159,7 +159,10 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-export JAVA_HOME="/usr/lib/jvm/jdk-14.0.2"
+export JAVA_HOME="/usr/lib/jvm/openjdk-bin-16"
+
+export VISUAL=nvim
+export EDITOR="$VISUAL"
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
