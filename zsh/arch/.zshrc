@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/alabella/.oh-my-zsh"
+export ZSH="/home/aidan/.oh-my-zsh"
 
 
 alias ls='ls --color=auto'
@@ -33,6 +33,8 @@ alias t='tmux'
 alias dff='cd ~/dotfiles'
 alias gloo='git log --oneline'
 alias ngsql='mysql -u root -p ngafid'
+alias getd2='echo "3819954573" | xclip -sel c'
+alias swdpi='/home/aidan/src/plasma-dpi-switcher/dpiswitch --config /home/aidan/src/plasma-dpi-switcher/profile.json'
 
 # non-SUSE-Specific
 
@@ -42,8 +44,7 @@ alias cd..='cd ..'
 alias ll='ls -l'
 
 # ARCH-Specific
-
-#export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.6.10-0.fc31.x86_64
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
 
 #Env. Vars 
 
