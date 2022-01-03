@@ -9,8 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/aidan/.oh-my-zsh"
-
+export ZSH="/home/ngafid/.oh-my-zsh"
 
 alias ls='ls --color=auto'
 alias cs='cd ~/RIT/CSCI250'
@@ -24,17 +23,12 @@ alias pst='~/Docume*/stat*'
 alias swenp='cd ~/IntelliJProjects/team-project*/src/main/java/com/webcheckers'
 alias swenpmod='cd ~/IntelliJProjects/team-project-2191-swen-261-12-b-team/src/main/java/com/webcheckers/model'
 alias cshw='cd ~/RIT/CSCI250/Homew*'
-alias csr='cd ~/RIT/CSResearch/D2S2/ngafid2*'
+alias csr='cd /mnt/ngafid/ngafid2.0'
 alias q='exit'
 alias cst='cd ~/RIT/CSCI262/Homew*'
 alias csrs='cd ~/RIT/CSResearch/D2S2/ngafid2.0/src/main/java/org/ngafid'
-alias c='clear'
-alias t='tmux'
-alias dff='cd ~/dotfiles'
-alias gloo='git log --oneline'
 alias ngsql='mysql -u root -p ngafid'
-alias getd2='echo "3819954573" | xclip -sel c'
-alias swdpi='/home/aidan/src/plasma-dpi-switcher/dpiswitch --config /home/aidan/src/plasma-dpi-switcher/profile.json'
+alias c='clear'
 
 # non-SUSE-Specific
 
@@ -43,12 +37,14 @@ alias ..='cd ..'
 alias cd..='cd ..'
 alias ll='ls -l'
 
+source /mnt/ngafid/ngafid2.0/init_env.sh
+
 # ARCH-Specific
-export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
+
+#export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.6.10-0.fc31.x86_64
 
 #Env. Vars 
-
-source ~/RIT/CSResearch/D2S2/ngafid2.0/init_env.sh
+export TERM=xterm-256color
 
 
 # Set name of the theme to load --- if set to "random", it will
@@ -160,7 +156,7 @@ SPACESHIP_PROMPT_ORDER=(
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -190,8 +186,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-#echo "Arch $(uname -o) $(uname -r) on Aidan's ThinkPad T480s"
-pfetch
+uname -a
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

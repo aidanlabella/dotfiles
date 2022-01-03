@@ -9,32 +9,46 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/alabella/.oh-my-zsh"
-export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-11.0.8.10-2.fc32.x86_64"
-export TERM=xterm-256color
+export ZSH="/Users/aidan/.oh-my-zsh"
 
 
 alias ls='ls --color=auto'
-alias dff='cd ~/dotfiles'
+alias cs='cd ~/RIT/CSCI250'
+alias csp='cd ~/RIT/CSCI243/Proj*/CSCI243-FinalProject/'
 alias cemacs='emacs -nw'
 alias cem='emacs -nw'
 alias styx='ssh apl1341@styx.cs.rit.edu'
+alias hp='~/Docume*/perf*'
+alias bal='~/Docume*/balan*'
+alias pst='~/Docume*/stat*'
+alias swenp='cd ~/IntelliJProjects/team-project*/src/main/java/com/webcheckers'
+alias swenpmod='cd ~/IntelliJProjects/team-project-2191-swen-261-12-b-team/src/main/java/com/webcheckers/model'
+alias cshw='cd ~/RIT/CSCI250/Homew*'
 alias csr='cd ~/RIT/CSResearch/D2S2/ngafid2*'
 alias q='exit'
 alias cst='cd ~/RIT/CSCI262/Homew*'
 alias csrs='cd ~/RIT/CSResearch/D2S2/ngafid2.0/src/main/java/org/ngafid'
 alias c='clear'
+alias t='tmux'
+alias dff='cd ~/dotfiles'
+alias gloo='git log --oneline'
+alias ngsql='mysql -u root -p ngafid'
+alias getd2='echo "3819954573" | xclip -sel c'
+alias swdpi='/home/aidan/src/plasma-dpi-switcher/dpiswitch --config /home/aidan/src/plasma-dpi-switcher/profile.json'
 
-# non-SUSE-Specific
-
+#Useful Aliases
 alias la='ls -la'
 alias ..='cd ..'
 alias cd..='cd ..'
 alias ll='ls -l'
 
-# ARCH-Specific
+#Neovim
+alias vim='nvim'
+alias nvi='nvim'
 
-#export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.6.10-0.fc31.x86_64
+# MACOS-Specific
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-14.0.2.jdk/Contents/Home
+export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
 
 #Env. Vars 
 
@@ -150,7 +164,7 @@ SPACESHIP_PROMPT_ORDER=(
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -180,7 +194,17 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-echo "Fedora $(uname -o) $(uname -r) on Aidan's PC"
+pfetch
+
+## Homebrew
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
