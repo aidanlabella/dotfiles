@@ -36,7 +36,7 @@ fi
 
 #Custom commands/modifications
 alias ls='gls --color=auto'
-alias bls='/usr/bin/ls --color=auto'
+alias bls='/bin/ls --color=auto'
 alias gloo='git log --oneline'
 
 #Useful Aliases
