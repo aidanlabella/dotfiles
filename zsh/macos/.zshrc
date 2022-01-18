@@ -14,7 +14,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/aidan/.oh-my-zsh"
+export ZSH="${HOME}/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
@@ -35,9 +35,12 @@ then
 fi
 
 #Custom commands/modifications
+alias gloo='git log --oneline'
+
+#Make Mac more like Linux :)
 alias ls='gls --color=auto'
 alias bls='/bin/ls --color=auto'
-alias gloo='git log --oneline'
+alias eix='brew search'
 
 #Useful Aliases
 alias la='ls -la'
@@ -45,13 +48,14 @@ alias ..='cd ..'
 alias cd..='cd ..'
 alias ll='ls -l --group-directories-first'
 alias q='exit'
+alias ls='gls --color=auto'
+alias bls='/bin/ls --color=auto'
 alias c='clear'
 
 ## Directory Shortcuts
 alias cs='cd ~/RIT/DSCI789'
 alias csrs='cd ~/RIT/CSResearch/D2S2/ngafid2.0/src/main/java/org/ngafid'
 alias dff='cd ~/dotfiles'
-alias csr='cd ~/RIT/CSResearch/D2S2/ngafid2.0'
 
 ## RIT Machines
 alias styx='ssh apl1341@styx.cs.rit.edu'
@@ -70,11 +74,13 @@ alias t='tmux'
 alias ngsql='mysql -u root -p ngafid'
 
 #Env. Vars 
-source ~/RIT/CSResearch/D2S2/ngafid2.0/init_env.sh
+source ~/.eagleview-aliases.zsh
 
 ## MACOS-Specific
 export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-14.0.2.jdk/Contents/Home"
+export JAVA_HOME="/usr/local/opt/openjdk@11"
+
+PATH=$PATH:~/myneovim/nvim/bin
 
 pfetch
 
