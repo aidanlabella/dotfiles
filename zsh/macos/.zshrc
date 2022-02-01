@@ -21,6 +21,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 COMPLETION_WAITING_DOTS="true"
 ENABLE_CORRECTION="true"
 
+source ~/.zsh-syntax-hi-dracula.sh
 plugins=(git zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
@@ -56,6 +57,8 @@ alias c='clear'
 alias cs='cd ~/RIT/DSCI789'
 alias csrs='cd ~/RIT/CSResearch/D2S2/ngafid2.0/src/main/java/org/ngafid'
 alias dff='cd ~/dotfiles'
+alias csr='cd ~/RIT/CSResearch/D2S2/ngafid2.0'
+alias exa='cd ~/RIT/CSResearch/D2S2/exact'
 
 ## RIT Machines
 alias styx='ssh apl1341@styx.cs.rit.edu'
@@ -66,6 +69,11 @@ alias cem='emacs -nw'
 ## Neovim
 alias vim='nvim'
 alias nvi='nvim'
+
+## SSH - Remote Machines
+alias sdt='ssh aidan@aidans-desktop || ssh aidan@192.168.1.8'
+alias sas='ssh alabella@homeserver || ssh alabella@192.168.1.2'
+alias sns='ssh ngafid@homeserver || ssh ngafid@192.168.1.2'
 
 ## tmux
 alias t='tmux'
@@ -78,9 +86,14 @@ source ~/.eagleview-aliases.zsh
 
 ## MACOS-Specific
 export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
+<<<<<<< HEAD
 export JAVA_HOME="/usr/local/opt/openjdk@11"
 
 PATH=$PATH:~/myneovim/nvim/bin
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-11.0.13.jdk/Contents/Home"
+
+# Aliases to the better GNU utils for Mac
+alias sed='gsed'
 
 pfetch
 
