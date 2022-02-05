@@ -39,6 +39,7 @@ fi
 #Custom commands/modifications
 alias ls='ls --color=auto'
 alias gloo='git log --oneline'
+alias open='xdg-open'
 
 #Useful Aliases
 alias la='ls -la'
@@ -53,6 +54,7 @@ alias cs='cd ~/RIT/DSCI789'
 alias csrs='cd ~/RIT/CSResearch/D2S2/ngafid2.0/src/main/java/org/ngafid'
 alias dff='cd ~/dotfiles'
 alias csr='cd ~/RIT/CSResearch/D2S2/ngafid2.0'
+alias exa='cd ~/RIT/CSResearch/D2S2/exact'
 
 ## RIT Machines
 alias styx='ssh apl1341@styx.cs.rit.edu'
@@ -74,7 +76,7 @@ alias ngsql='mysql -u root -p ngafid'
 source ~/RIT/CSResearch/D2S2/ngafid2.0/init_env.sh
 
 ## Gentoo-Specific
-export JAVA_HOME=/usr/lib/openjdk-bin-14
+export JAVA_HOME=/usr/lib/jvm/openjdk-bin-14
 
 pfetch
 
