@@ -14,7 +14,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="${HOME}/.oh-my-zsh"
+export ZSH="/Users/aidan/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
@@ -36,12 +36,9 @@ then
 fi
 
 #Custom commands/modifications
-alias gloo='git log --oneline'
-
-#Make Mac more like Linux :)
 alias ls='gls --color=auto'
 alias bls='/bin/ls --color=auto'
-alias eix='brew search'
+alias gloo='git log --oneline'
 
 #Useful Aliases
 alias la='ls -la'
@@ -49,8 +46,6 @@ alias ..='cd ..'
 alias cd..='cd ..'
 alias ll='ls -l --group-directories-first'
 alias q='exit'
-alias ls='gls --color=auto'
-alias bls='/bin/ls --color=auto'
 alias c='clear'
 
 ## Directory Shortcuts
@@ -82,17 +77,17 @@ alias t='tmux'
 alias ngsql='mysql -u root -p ngafid'
 
 #Env. Vars 
-source ~/.eagleview-aliases.zsh
+source ~/RIT/CSResearch/D2S2/ngafid2.0/init_env.sh
 
 ## MACOS-Specific
 export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
-<<<<<<< HEAD
-export JAVA_HOME="/usr/local/opt/openjdk@11"
-
-PATH=$PATH:~/myneovim/nvim/bin
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-11.0.13.jdk/Contents/Home"
 
-# Aliases to the better GNU utils for Mac
+### Aliases from linux to mac
+alias eix='brew search'
+alias lsblk='diskutil list'
+
+### Aliases to the better utils for Mac
 alias sed='gsed'
 
 pfetch
