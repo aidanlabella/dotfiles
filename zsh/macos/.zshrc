@@ -47,6 +47,7 @@ alias cd..='cd ..'
 alias ll='ls -l --group-directories-first'
 alias q='exit'
 alias c='clear'
+alias update='brew update && brew upgrade'
 
 ## Directory Shortcuts
 alias cs='cd ~/RIT/DSCI789'
