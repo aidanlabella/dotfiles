@@ -23,6 +23,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 COMPLETION_WAITING_DOTS="true"
 ENABLE_CORRECTION="true"
 
+source ~/.zsh-syntax-hi-dracula.sh
 plugins=(git zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
@@ -48,6 +49,7 @@ alias cd..='cd ..'
 alias ll='ls -l --group-directories-first'
 alias q='exit'
 alias c='clear'
+alias update='sudo eix-sync && sudo emerge -uDN @world --autounmask'
 
 ## Directory Shortcuts
 alias cs='cd ~/RIT/DSCI789'
