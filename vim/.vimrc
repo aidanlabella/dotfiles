@@ -6,9 +6,9 @@
 ""entrypoint of vim configruations
 
 "Source setting files
-"source $HOME/.vim/plugins/plugins.vim
-"source $HOME/.vim/general/editor.vim
-"source $HOME/.vim/general/theme.vim
-"source $HOME/.vim/keybindings/keys.vim
-"source $HOME/.vim/markup/general.vim
-"source $HOME/.vim/plugins/settings.vim
+source $HOME/.vim/plugins/plugins.vim
+source $HOME/.vim/general/editor.vim
+source $HOME/.vim/general/theme.vim
+source $HOME/.vim/keybindings/keys.vim
+source $HOME/.vim/markup/general.vim
+source $HOME/.vim/plugins/settings.vim
