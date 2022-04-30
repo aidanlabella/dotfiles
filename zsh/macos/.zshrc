@@ -73,7 +73,7 @@ alias sns='ssh ngafid@homeserver || ssh ngafid@192.168.1.2'
 
 ## tmux
 alias t='tmux'
-aliad ta='tmux a'
+alias ta='tmux a'
 alias tn='tmux new -s'
 
 ## mySQL
