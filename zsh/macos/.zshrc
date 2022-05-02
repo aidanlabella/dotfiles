@@ -80,7 +80,7 @@ alias tn='tmux new -s'
 alias ngsql='mysql -u root -p ngafid'
 
 #Env. Vars 
-source ~/RIT/CSResearch/D2S2/ngafid2.0/init_env.sh
+source ~/RIT/UGRA/D2S2/ngafid2.0/init_env.sh
 
 ## MACOS-Specific
 export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
