@@ -22,7 +22,7 @@ COMPLETION_WAITING_DOTS="true"
 ENABLE_CORRECTION="true"
 
 source ~/.zsh-syntax-hi-dracula.sh
-plugins=(git zsh-syntax-highlighting)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
