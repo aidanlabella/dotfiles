@@ -16,25 +16,16 @@ fi
 # Path to your oh-my-zsh installation.
 # Linux: /home
 # Mac: /Users
-export ZSH="/home/aidan/.oh-my-zsh"
+export ZSH="/home/ngafid/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 COMPLETION_WAITING_DOTS="true"
 ENABLE_CORRECTION="true"
 
-plugins=(git zsh-syntax-highlighting)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-
-## Homebrew
-if type brew &>/dev/null
-then
-  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-
-  autoload -Uz compinit
-  compinit
-fi
 
 #Custom commands/modifications
 alias ls='ls --color=auto'
@@ -61,11 +52,11 @@ alias styx='ssh apl1341@styx.cs.rit.edu'
 alias cem='emacs -nw'
 
 ## Neovim
-alias vim='nvim'
-alias nvi='nvim'
 
 ## tmux
 alias t='tmux'
+alias ta='tmux a'
+alias tn='tmux new -s'
 
 ## mySQL
 alias ngsql='mysql -u root -p ngafid'
