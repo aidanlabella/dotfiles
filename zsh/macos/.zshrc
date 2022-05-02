@@ -51,10 +51,10 @@ alias update='brew update && brew upgrade'
 
 ## Directory Shortcuts
 alias cs='cd ~/RIT/DSCI789'
-alias csrs='cd ~/RIT/CSResearch/D2S2/ngafid2.0/src/main/java/org/ngafid'
+alias csrs='cd ~/RIT/UGRA/D2S2/ngafid2.0/src/main/java/org/ngafid'
 alias dff='cd ~/dotfiles'
-alias csr='cd ~/RIT/CSResearch/D2S2/ngafid2.0'
-alias exa='cd ~/RIT/CSResearch/D2S2/exact'
+alias csr='cd ~/RIT/UGRA/D2S2/ngafid2.0'
+alias exa='cd ~/RIT/UGRA/D2S2/exact'
 
 ## RIT Machines
 alias styx='ssh apl1341@styx.cs.rit.edu'
