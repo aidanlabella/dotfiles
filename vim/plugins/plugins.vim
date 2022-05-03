@@ -31,10 +31,6 @@ Plug 'machakann/vim-sandwich'
 Plug 'psliwka/vim-smoothie'
 Plug 'lervag/vimtex'
 
-" May reduce performance
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-
 "No longer used/too buggy
 "Plug 'jiangmiao/auto-pairs'
 "Plug 'puremourning/vimspector'
