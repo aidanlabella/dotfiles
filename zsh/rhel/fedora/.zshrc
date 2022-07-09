@@ -53,7 +53,7 @@ alias update='sudo eix-sync && sudo emerge -uDN @world --autounmask'
 
 ## Directory Shortcuts
 alias cs='cd ~/RIT/DSCI789'
-alias csrs='cd ~/RIT/CSResearch/D2S2/ngafid2.0/src/main/java/org/ngafid'
+alias csrs='cd ~/RIT/UGRA/D2S2/ngafid2.0/src/main/java/org/ngafid'
 alias dff='cd ~/dotfiles'
 alias csr='cd ~/RIT/UGRA/D2S2/ngafid2.0'
 alias exa='cd ~/RIT/UGRA/D2S2/exact'
@@ -75,7 +75,7 @@ alias t='tmux'
 alias ngsql='mysql -u root -p ngafid'
 
 #Env. Vars 
-source ~/RIT/CSResearch/D2S2/ngafid2.0/init_env.sh
+source ~/RIT/UGRA/D2S2/ngafid2.0/init_env.sh
 
 pfetch
 
