@@ -68,7 +68,7 @@
 # Defaults!/usr/bin/sudoreplay !log_output
 # Defaults!/usr/local/bin/sudoreplay !log_output
 # Defaults!REBOOT !log_output
-Defaults passprompt="🔒Enter password: "
+Defaults passprompt="🔒Password: "
 ##
 ## Runas alias specification
 ##
