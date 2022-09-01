@@ -53,13 +53,16 @@ alias update='sudo eix-sync && sudo emerge -uDN @world --autounmask'
 
 ## Directory Shortcuts
 alias cs='cd ~/RIT/DSCI789'
-alias csrs='cd ~/RIT/CSResearch/D2S2/ngafid2.0/src/main/java/org/ngafid'
+alias csrs='cd ~/RIT/UGRA/D2S2/ngafid2.0/src/main/java/org/ngafid'
 alias dff='cd ~/dotfiles'
-alias csr='cd ~/RIT/CSResearch/D2S2/ngafid2.0'
-alias exa='cd ~/RIT/CSResearch/D2S2/exact'
+alias csr='cd ~/RIT/UGRA/D2S2/ngafid2.0'
+alias exa='cd ~/RIT/UGRA/D2S2/exact'
 
 ## RIT Machines
 alias styx='ssh apl1341@styx.cs.rit.edu'
+alias sdt='ssh aidan@aidan-gentbox || ssh aidan@192.168.44.8'
+alias sas='ssh alabella@homeserver || ssh alabella@192.168.1.2'
+alias sns='ssh ngafid@homeserver || ssh ngafid@192.168.1.2'
 
 ## Emacs
 alias cem='emacs -nw'
@@ -70,15 +73,16 @@ alias nvi='nvim'
 
 ## tmux
 alias t='tmux'
+alias ta='tmux a'
+alias tn='tmux new -s'
 
 ## mySQL
 alias ngsql='mysql -u root -p ngafid'
 
 #Env. Vars 
-source ~/RIT/CSResearch/D2S2/ngafid2.0/init_env.sh
+source ~/RIT/UGRA/D2S2/ngafid2.0/init_env.sh
 
 ## Gentoo-Specific
-export JAVA_HOME=/usr/lib/jvm/openjdk-bin-14
 
 pfetch
 
