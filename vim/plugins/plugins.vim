@@ -31,6 +31,7 @@ Plug 'machakann/vim-sandwich'
 Plug 'psliwka/vim-smoothie'
 Plug 'lervag/vimtex'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'mhinz/vim-startify'
 
 "No longer used/too buggy
 "Plug 'jiangmiao/auto-pairs'
