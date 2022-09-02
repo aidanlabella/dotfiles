@@ -9,7 +9,6 @@ let g:which_key_map.g = {
       \ 'name' : '+git' ,
       \ 'a' : [':Gwrite'                       	   , 'add current'],
       \ 'A' : [':Git add %'                        , 'add all'],
-      \ 'b' : [':Git blame'                        , 'blame'],
       \ 'B' : [':GBrowse'                          , 'browse'],
       \ 'c' : [':Git commit'                       , 'commit'],
       \ 'd' : [':Git diff'                         , 'diff'],
@@ -33,4 +32,5 @@ let g:which_key_map.g = {
       \ 'u' : ['<Plug>(GitGutterUndoHunk)'         , 'undo hunk'],
       \ 'v' : [':GV'                               , 'view commits'],
       \ 'V' : [':GV!'                              , 'view buffer commits'],
+      \ 'w' : [':Git blame'                        , 'whodunnit?'],
       \ }
