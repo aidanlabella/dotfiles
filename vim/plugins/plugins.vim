@@ -30,6 +30,7 @@ Plug 'vim-syntastic/syntastic'
 Plug 'machakann/vim-sandwich'
 Plug 'psliwka/vim-smoothie'
 Plug 'lervag/vimtex'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "No longer used/too buggy
 "Plug 'jiangmiao/auto-pairs'

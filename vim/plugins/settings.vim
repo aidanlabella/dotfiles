@@ -42,17 +42,17 @@ let g:NERDTreeHijackNetrw = 0
 "autocmd CursorHold * silent call CocActionAsync('highlight')
 
 ""use <tab> for trigger completion and navigate to the next complete item
-"function! s:check_back_space() abort
-  "let col = col('.') - 1
-  "return !col || getline('.')[col - 1]  =~ '\s'
-"endfunction
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
 
-"inoremap <silent><expr> <Tab>
-      "\ pumvisible() ? "\<C-n>" :
-      "\ <SID>check_back_space() ? "\<Tab>" :
-      "\ coc#refresh()
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
 
-"let g:coc_disable_startup_warning = 1
+let g:coc_disable_startup_warning = 1
 "
 "Ranger
 let g:ranger_map_keys = 0
