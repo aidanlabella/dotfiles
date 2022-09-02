@@ -32,6 +32,8 @@ Plug 'psliwka/vim-smoothie'
 Plug 'lervag/vimtex'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mhinz/vim-startify'
+Plug 'vim-python/python-syntax'
+Plug 'cj/vim-webdevicons'
 
 "No longer used/too buggy
 "Plug 'jiangmiao/auto-pairs'

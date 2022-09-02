@@ -31,6 +31,7 @@ endfunction
 
 "NERDTree
 let g:NERDTreeHijackNetrw = 0
+set fillchars+=vert:\ 
 
 "COC/LSP
 if exists('*complete_info')
