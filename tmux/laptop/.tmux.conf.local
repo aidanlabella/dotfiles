@@ -139,12 +139,15 @@ tmux_conf_theme_pairing_attr='none'
 ## Custom Config Options ---- 
 ## 
 
-tmux_conf_theme_status_left=' #{username}@#{hostname} | #(uname -r) |  '
-tmux_conf_theme_status_right='💻 #{cpu_icon} #{cpu_percentage} @ 🔥 #{cpu_temp}, 🐏 #{ram_icon} #{ram_percentage} |  #{battery_bar} #{battery_percentage}#{battery_status} | 🕛 %a %b %d %I:%M %p '
+tmux_conf_theme_status_left=' #{username}@#{hostname} | #(uname -r) (Darwin) |  '
+tmux_conf_theme_status_right='💻 #{cpu_icon} #{cpu_percentage} , 🐏 #{ram_icon} #{ram_percentage} |  #{battery_bar} #{battery_percentage}#{battery_status} | 🕛 %a %b %d %I:%M %p '
 
 # Other Plugins
 set -g @plugin 'ChanderG/tmux-notify'
 set -g @plugin 'tmux-plugins/tmux-cpu'
+
+# 'Unbindings'
+set -g prefix2 C-b
 
 # Custom Keybindings
 bind -n M-h select-pane -L
