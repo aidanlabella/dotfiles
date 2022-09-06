@@ -5,6 +5,8 @@
 "plugins/settings.vim
 "configure plugin settings
 
+"Python syntax
+let g:python_highlight_all = 1
 
 "Airline
 let g:airline#extensions#tabline#enabled = 1 
