@@ -63,12 +63,12 @@ alias styx='ssh apl1341@styx.cs.rit.edu'
 alias sdt='ssh aidan@aidan-gentbox || ssh aidan@192.168.44.8'
 alias sas='ssh alabella@homeserver || ssh alabella@192.168.1.2'
 alias sns='ssh ngafid@homeserver || ssh ngafid@192.168.1.2'
+alias smbp='ssh aidan@aidans-mbp-2'
 
 ## Emacs
 alias cem='emacs -nw'
 
 ## Neovim
-alias vim='nvim'
 alias nvi='nvim'
 
 ## tmux
