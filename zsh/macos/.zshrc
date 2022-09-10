@@ -50,9 +50,10 @@ alias c='clear'
 alias update='brew update && brew upgrade'
 
 ## Directory Shortcuts
-alias cs='cd ~/RIT/DSCI789'
-alias csrs='cd ~/RIT/UGRA/D2S2/ngafid2.0/src/main/java/org/ngafid'
+alias cs='cd ~/RIT/2221'
 alias dff='cd ~/dotfiles'
+alias csrs='cd ~/RIT/UGRA/D2S2/ngafid2.0/src/main/java/org/ngafid'
+alias csrj='cd ~/RIT/UGRA/D2S2/ngafid2.0/src/main/javascript'
 alias csr='cd ~/RIT/UGRA/D2S2/ngafid2.0'
 alias exa='cd ~/RIT/UGRA/D2S2/exact'
 
@@ -63,13 +64,13 @@ alias styx='ssh apl1341@styx.cs.rit.edu'
 alias cem='emacs -nw'
 
 ## Neovim
-alias vim='nvim'
 alias nvi='nvim'
 
 ## SSH - Remote Machines
-alias sdt='ssh aidan@aidans-desktop || ssh aidan@192.168.1.8'
+alias sdt='ssh aidan@aidan-gentbox || ssh aidan@192.168.44.8'
 alias sas='ssh alabella@homeserver || ssh alabella@192.168.1.2'
 alias sns='ssh ngafid@homeserver || ssh ngafid@192.168.1.2'
+alias stp='ssh aidan@gol2518.labellanetworks.com || ssh aidan@apl-gol-2518.student.rit.edu'
 
 ## tmux
 alias t='tmux'
@@ -77,7 +78,7 @@ alias ta='tmux a'
 alias tn='tmux new -s'
 
 ## mySQL
-alias ngsql='mysql -u root -p ngafid'
+alias ngsql='mycli -u root -p ngafid'
 
 #Env. Vars 
 source ~/RIT/UGRA/D2S2/ngafid2.0/init_env.sh
