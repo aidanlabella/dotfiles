@@ -51,6 +51,8 @@ tmux_conf_theme_status_fg='#f8f8f2'                     # light gray
 tmux_conf_theme_status_bg='#343746'                     # dark gray
 tmux_conf_theme_status_attr='none'
 
+conf_icon='macOS '
+
 # terminal title
 #   - built-in variables are:
 #     - #{circled_window_index}
@@ -84,6 +86,7 @@ tmux_conf_theme_window_status_format='#I #W  #{?window_bell_flag,🔔,}'
 #     - #{hostname_ssh}
 #     - #{username}
 #     - #{username_ssh}
+
 tmux_conf_theme_window_status_current_fg='#282a36'      # black
 tmux_conf_theme_window_status_current_bg='#bd93f9'      # light blue
 tmux_conf_theme_window_status_current_attr='bold'
@@ -139,8 +142,8 @@ tmux_conf_theme_pairing_attr='none'
 ## Custom Config Options ---- 
 ## 
 
-tmux_conf_theme_status_left=' #{username}@#{hostname} | macOS  '
-tmux_conf_theme_status_right='💻 #{cpu_icon} #{cpu_percentage} , 🐏 #{ram_icon} #{ram_percentage} |  #{battery_bar} #{battery_percentage}#{battery_status} | 🕛 %a %b %d %I:%M %p '
+tmux_conf_theme_status_left='  #{username}@#{hostname} | #{conf_icon} '
+tmux_conf_theme_status_right=' #I / #{session_windows} |   #{session_name} |  %a %b %d %I:%M %p '
 
 # Other Plugins
 set -g @plugin 'ChanderG/tmux-notify'
