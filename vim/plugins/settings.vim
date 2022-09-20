@@ -33,6 +33,7 @@ endfunction
 
 "NERDTree
 let g:NERDTreeHijackNetrw = 0
+let NERDTreeMapOpenInTab='<ENTER>'
 set fillchars+=vert:\ 
 
 "COC/LSP
