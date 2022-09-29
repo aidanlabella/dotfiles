@@ -27,7 +27,7 @@ Plug 'junegunn/gv.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'vim-syntastic/syntastic'
-Plug 'machakann/vim-sandwich'
+Plug 'tpope/vim-surround'
 Plug 'psliwka/vim-smoothie'
 Plug 'lervag/vimtex'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}

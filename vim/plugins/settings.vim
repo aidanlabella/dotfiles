@@ -18,6 +18,12 @@ let g:airline#extensions#tabline#show_tab_type = 1
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 
+function! AirlineInit()
+    let g:airline_section_a = airline#section#create([' ', ' ', 'mode'])
+endfunction
+autocmd User AirlineAfterInit call AirlineInit()
+
+
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
