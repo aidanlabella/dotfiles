@@ -50,9 +50,10 @@ alias ll='ls -l --group-directories-first'
 alias q='exit'
 alias c='clear'
 alias update='sudo eix-sync && sudo emerge -uDN @world --autounmask'
+alias gcl='/usr/bin/gcl'
 
 ## Directory Shortcuts
-alias cs='cd ~/RIT/DSCI789'
+alias cs='cd ~/RIT/2221'
 alias csrs='cd ~/RIT/UGRA/D2S2/ngafid2.0/src/main/java/org/ngafid'
 alias dff='cd ~/dotfiles'
 alias csr='cd ~/RIT/UGRA/D2S2/ngafid2.0'
@@ -63,6 +64,7 @@ alias styx='ssh apl1341@styx.cs.rit.edu'
 alias sdt='ssh aidan@aidan-gentbox || ssh aidan@192.168.44.8'
 alias sas='ssh alabella@homeserver || ssh alabella@192.168.1.2'
 alias sns='ssh ngafid@homeserver || ssh ngafid@192.168.1.2'
+alias slab='ssh apl1341@gol2518-r1.main.ad.rit.edu'
 alias smbp='ssh aidan@aidans-mbp-2'
 
 ## Emacs
@@ -82,7 +84,10 @@ alias ngsql='mysql -u root -p ngafid'
 #Env. Vars 
 source ~/RIT/UGRA/D2S2/ngafid2.0/init_env.sh
 
-## Gentoo-Specific
+## ROCm
+export HSA_OVERRIDE_GFX_VERSION=10.3.0
+
+set -o vi
 
 pfetch
 
