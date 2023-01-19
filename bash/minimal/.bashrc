@@ -11,7 +11,7 @@ then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
 # Prompt
-export PS1="\[\e[01;92m\][\[\e[01;32m\]\u\[\e[m\]\[\e[01;32m\]@\[\e[m\]\[\e[01;32m\]\h\[\e[m\] \[\e[01;34m\]\W\[\e[01;37m\]\\[\e[01;92m\]]\[\e[01;34m\]\$\[\e[m\] "
+export PS1="\[\e[01;92m\][\[\e[01;32m\]\u\[\e[m\]\[\e[01;32m\]@\[\e[m\]\[\e[01;32m\]\h\[\e[m\] \[\e[01;34m\]\W\[\e[01;37m\]\\[\e[01;92m\]]\[\e[01;34m\]\\$\[\e[m\] "
 #PS1="\[\e[01;32m\][\u@\h \[\e[01;34m\]\]\\W\[\e[01;32m\]]\e\[[01;34m\]\\$ \[\e[m\] "
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
