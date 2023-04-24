@@ -25,14 +25,14 @@ tmux_conf_theme_pane_border_style=thin
 
 # pane borders colours:
 tmux_conf_theme_pane_border='#444444'                   # gray
-tmux_conf_theme_pane_active_border='#bd93f9'            # light blue
+tmux_conf_theme_pane_active_border='#e06c75'            # light blue
 
 # pane indicator colours
 tmux_conf_theme_pane_indicator='#44475a'                # light blue
 tmux_conf_theme_pane_active_indicator='#44475a'         # light blue
 
 # status line style
-tmux_conf_theme_message_fg='#282a36'                    # black
+tmux_conf_theme_message_fg='#282c34'                    # black
 tmux_conf_theme_message_bg='#ff79c6'                    # yellow
 tmux_conf_theme_message_attr='bold'
 
@@ -51,7 +51,7 @@ tmux_conf_theme_status_fg='#f8f8f2'                     # light gray
 tmux_conf_theme_status_bg='#343746'                     # dark gray
 tmux_conf_theme_status_attr='none'
 
-conf_icon='macOS '
+conf_icon='OS'
 
 # terminal title
 #   - built-in variables are:
@@ -87,8 +87,8 @@ tmux_conf_theme_window_status_format='#I #W  #{?window_bell_flag,🔔,}'
 #     - #{username}
 #     - #{username_ssh}
 
-tmux_conf_theme_window_status_current_fg='#282a36'      # black
-tmux_conf_theme_window_status_current_bg='#bd93f9'      # light blue
+tmux_conf_theme_window_status_current_fg='#282c34'      # black
+tmux_conf_theme_window_status_current_bg='#e06c75'      # light blue
 tmux_conf_theme_window_status_current_attr='bold'
 #tmux_conf_theme_window_status_current_format='#I #W'
 tmux_conf_theme_window_status_current_format='#I #W '
@@ -105,7 +105,7 @@ tmux_conf_theme_window_status_bell_bg='default'
 tmux_conf_theme_window_status_bell_attr='blink,bold'
 
 # window last status style
-tmux_conf_theme_window_status_last_fg='#bd93f9'         # light blue
+tmux_conf_theme_window_status_last_fg='#e06c75'         # light blue
 tmux_conf_theme_window_status_last_bg='default'
 tmux_conf_theme_window_status_last_attr='none'
 
@@ -124,13 +124,13 @@ tmux_conf_theme_right_separator_sub=''  #   PowerlineSymbols.otf font
 #tmux_conf_theme_right_separator_main='\uE0B2'
 #tmux_conf_theme_right_separator_sub='\uE0B3'
 
-tmux_conf_theme_status_left_fg='#282a36,#f8f8f2,#e4e4e4'  # black, white , white
-tmux_conf_theme_status_left_bg='#50fa7b,#6272a4,#44475a'  # yellow, pink, white blue
+tmux_conf_theme_status_left_fg='#282c34,#f8f8f2,#e4e4e4'  # black, white , white
+tmux_conf_theme_status_left_bg='#61afef,#98c379,#44475a'  # yellow, pink, white blue
 tmux_conf_theme_status_left_attr='bold,none,none'
 
 # status right style
-tmux_conf_theme_status_right_fg='#f8f8f2,#f8f8f2,#282a36' # light gray, white, black
-tmux_conf_theme_status_right_bg='#44475a,#6272a4,#bd93f9' # dark gray, red, white
+tmux_conf_theme_status_right_fg='#f8f8f2,#f8f8f2,#282c34' # light gray, white, black
+tmux_conf_theme_status_right_bg='#44475a,#98c379,#e06c75' # dark gray, red, white
 tmux_conf_theme_status_right_attr='none,none,bold'
 
 # pairing indicator
@@ -143,7 +143,7 @@ tmux_conf_theme_pairing_attr='none'
 ## 
 
 tmux_conf_theme_status_left='  #{username}@#{hostname} | #{conf_icon} '
-tmux_conf_theme_status_right=' #I / #{session_windows} |   #{session_name} |  %a %b %d %I:%M %p '
+tmux_conf_theme_status_right=' #I / #{session_windows} |   #{session_name} |  %a %b %d %I:%M %p '
 
 # Other Plugins
 set -g @plugin 'ChanderG/tmux-notify'
