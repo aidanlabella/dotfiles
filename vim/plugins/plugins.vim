@@ -34,6 +34,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mhinz/vim-startify'
 Plug 'vim-python/python-syntax'
 Plug 'cj/vim-webdevicons'
+Plug 'joshdick/onedark.vim'
 
 "No longer used/too buggy
 "Plug 'jiangmiao/auto-pairs'
