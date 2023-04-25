@@ -21,12 +21,13 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 COMPLETION_WAITING_DOTS="true"
 ENABLE_CORRECTION="true"
 
-source ~/.zsh-syntax-hi-dracula.sh
+source ~/.zsh-syntax-hi-onedark.sh
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
 #Useful Aliases
+alias ls='lsd'
 alias la='ls -la'
 alias ..='cd ..'
 alias cd..='cd ..'
@@ -34,9 +35,12 @@ alias ll='ls -l --group-directories-first'
 alias q='exit'
 alias c='clear'
 alias update='yay -Syyu'
+alias open='xdg-open'
 
 ## Directory Shortcuts
-alias cs='cd ~/RIT/DSCI789'
+alias cs='cd ~/RIT/2225'
+alias csp='cd ~/RIT/2225/CSCI620/BigDataProject'
+alias cshw='cd ~/RIT/2225/CSCI620/Assignments/CSCI620-HW9'
 alias csrs='cd ~/RIT/UGRA/D2S2/ngafid2.0/src/main/java/org/ngafid'
 alias dff='cd ~/dotfiles'
 alias csr='cd ~/RIT/UGRA/D2S2/ngafid2.0'
@@ -49,26 +53,35 @@ alias styx='ssh apl1341@styx.cs.rit.edu'
 alias cem='emacs -nw'
 
 ## Neovim
-alias vim='nvim'
 alias nvi='nvim'
+alias nv='nvim'
 
 ## SSH - Remote Machines
-alias sdt='ssh aidan@aidans-desktop || ssh aidan@192.168.1.8'
 alias sas='ssh alabella@homeserver || ssh alabella@192.168.1.2'
 alias sns='ssh ngafid@homeserver || ssh ngafid@192.168.1.2'
+alias slab='ssh apl1341@gol2518-r1.main.ad.rit.edu'
+alias smass='ssh apl1341@massachusetts.cs.rit.edu'
+alias smac='ssh aidan@aidans-mbp-2 || ssh aidan@aidans-mbp'
 
 ## tmux
-alias t='tmux'
+alias t='tmux new -s system'
 alias ta='tmux a'
 alias tn='tmux new -s'
 
 ## mySQL
 alias ngsql='mysql -u root -p ngafid'
 
+alias gloo='git log --oneline'
+
 #Env. Vars 
 source ~/RIT/UGRA/D2S2/ngafid2.0/init_env.sh
 
+export JAVA_HOME='/usr/lib/jvm/java-11-openjdk'
+
+set -o vi
+
 pfetch
+eval "$(pyenv init -)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

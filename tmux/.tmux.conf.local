@@ -33,7 +33,7 @@ tmux_conf_theme_pane_active_indicator='#44475a'         # light blue
 
 # status line style
 tmux_conf_theme_message_fg='#282c34'                    # black
-tmux_conf_theme_message_bg='#ff79c6'                    # yellow
+tmux_conf_theme_message_bg='#56b6c2'                    # yellow
 tmux_conf_theme_message_attr='bold'
 
 # status line command style (<prefix> : Escape)
@@ -51,7 +51,7 @@ tmux_conf_theme_status_fg='#f8f8f2'                     # light gray
 tmux_conf_theme_status_bg='#343746'                     # dark gray
 tmux_conf_theme_status_attr='none'
 
-conf_icon='OS'
+conf_icon='Arch '
 
 # terminal title
 #   - built-in variables are:
@@ -125,12 +125,12 @@ tmux_conf_theme_right_separator_sub=''  #   PowerlineSymbols.otf font
 #tmux_conf_theme_right_separator_sub='\uE0B3'
 
 tmux_conf_theme_status_left_fg='#282c34,#f8f8f2,#e4e4e4'  # black, white , white
-tmux_conf_theme_status_left_bg='#61afef,#98c379,#44475a'  # yellow, pink, white blue
+tmux_conf_theme_status_left_bg='#61afef,#c678dd,#44475a'  # yellow, pink, white blue
 tmux_conf_theme_status_left_attr='bold,none,none'
 
 # status right style
-tmux_conf_theme_status_right_fg='#f8f8f2,#f8f8f2,#282c34' # light gray, white, black
-tmux_conf_theme_status_right_bg='#44475a,#98c379,#e06c75' # dark gray, red, white
+tmux_conf_theme_status_right_fg='#fffff2,#f8f8f2,#282c34' # light gray, white, black
+tmux_conf_theme_status_right_bg='#98c379,#c678dd,#e06c75' # dark gray, red, white
 tmux_conf_theme_status_right_attr='none,none,bold'
 
 # pairing indicator
