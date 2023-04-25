@@ -129,7 +129,7 @@ tmux_conf_theme_status_left_bg='#61afef,#c678dd,#44475a'  # yellow, pink, white 
 tmux_conf_theme_status_left_attr='bold,none,none'
 
 # status right style
-tmux_conf_theme_status_right_fg='#fffff2,#f8f8f2,#282c34' # light gray, white, black
+tmux_conf_theme_status_right_fg='#282c34,#f8f8f2,#282c34' # light gray, white, black
 tmux_conf_theme_status_right_bg='#98c379,#c678dd,#e06c75' # dark gray, red, white
 tmux_conf_theme_status_right_attr='none,none,bold'
 
