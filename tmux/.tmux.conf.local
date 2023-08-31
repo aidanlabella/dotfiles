@@ -51,7 +51,7 @@ tmux_conf_theme_status_fg='#f8f8f2'                     # light gray
 tmux_conf_theme_status_bg='#343746'                     # dark gray
 tmux_conf_theme_status_attr='none'
 
-conf_icon='Mac '
+conf_icon='CHANGEME    '
 
 # terminal title
 #   - built-in variables are:
@@ -142,8 +142,8 @@ tmux_conf_theme_pairing_attr='none'
 ## Custom Config Options ---- 
 ## 
 
-tmux_conf_theme_status_left=' 💻 #{username}@#{hostname} | #{conf_icon} '
-tmux_conf_theme_status_right=' #I / #{session_windows} |   #{session_name} |  %a %b %d %I:%M %p '
+tmux_conf_theme_status_left=' (💻,󰇅) #{username}@#{hostname} | #{conf_icon} '
+tmux_conf_theme_status_right=' #I / #{session_windows} |   #{session_name} | 󰃰  %a %b %d %I:%M %p '
 
 # Other Plugins
 set -g @plugin 'ChanderG/tmux-notify'
