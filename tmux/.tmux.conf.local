@@ -13,7 +13,7 @@ tmux_conf_theme_highlight_focused_pane=false
 # Change this to whatever colorscheme you want
 source -q ~/.tmux.conf.dracula.local
 
-conf_icon='macOS '
+conf_icon='OS GOES HERE'
 
 # terminal title
 #   - built-in variables are:
@@ -78,11 +78,15 @@ tmux_conf_theme_pairing_attr='none'
 ## Custom Config Options ---- 
 
 tmux_conf_theme_status_left='  #{username}@#{hostname} | #{conf_icon} '
-tmux_conf_theme_status_right=' #I / #{session_windows} |   #{session_name} |  %a %b %d %I:%M %p '
+tmux_conf_theme_status_right=' #I / #{session_windows} |  #{session_name} | #{weather}'
 
 # Other Plugins
 set -g @plugin 'ChanderG/tmux-notify'
 set -g @plugin 'tmux-plugins/tmux-cpu'
+set -g @plugin 'xamut/tmux-weather'
+
+set-option -g @tmux-weather-units "u"
+set-option -g @tmux-weather-format "%c+%t+%l"
 
 # 'Unbindings'
 set -g prefix2 C-b
