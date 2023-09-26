@@ -16,7 +16,7 @@ display_location()
   elif $location; then
     city=$(curl -s https://ipinfo.io/city 2> /dev/null)
     region=$(curl -s https://ipinfo.io/region 2> /dev/null)
-    echo " $city, $region"
+    echo "  $city, $region"
   else
     echo ''
   fi
@@ -32,11 +32,7 @@ fetch_weather_information()
 #get weather display
 display_weather()
 {
-  if $fahrenheit; then
-    display_weather='&u' # for USA system
-  else
-    display_weather='&m' # for metric system
-  fi
+  display_weather='&u' # for USA system
   weather_information=$(fetch_weather_information $display_weather)
 
   weather_condition=$(echo $weather_information | rev | cut -d ' ' -f2- | rev) # Sunny, Snow, etc
@@ -53,11 +49,11 @@ forecast_unicode()
   if [[ $weather_condition =~ 'snow' ]]; then
     echo '❄️  '
   elif [[ (($weather_condition =~ 'rain') || ($weather_condition =~ 'shower')) ]]; then
-    echo '☔️ '
+    echo '☔️  '
   elif [[ (($weather_condition =~ 'overcast') || ($weather_condition =~ 'cloud')) ]]; then
     echo '☁️  '
   elif [[ $weather_condition = 'NA' ]]; then
-    echo ''
+    echo '🌡️ '
   else
     echo '☀️  '
   fi
@@ -73,7 +69,7 @@ w_main()
   fi
 }
 
-fahrenheit=$1
+fahrenheit=true
 location=$2
 fixedlocation=$3
 
@@ -87,18 +83,17 @@ main()
 {
   current_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-  if [ "$(expr ${TIME_LAST} + ${RUN_EACH})" -lt "${TIME_NOW}" ]; then
-    # Run weather script here
-   w_main $fahrenheit $location $fixedlocation > "${DATAFILE}"
-    echo "${TIME_NOW}" > "${LAST_EXEC_FILE}"
-  fi
+  # Run weather script here
+  w_main $fahrenheit $location $fixedlocation > "${DATAFILE}"
+  echo "${TIME_NOW}" > "${LAST_EXEC_FILE}"
 
   cat "${DATAFILE}"
 }
 
 #run main driver program
-while true;
+while true
 do
     main
     sleep 60
 done
+#

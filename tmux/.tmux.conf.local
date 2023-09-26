@@ -13,7 +13,8 @@ tmux_conf_theme_highlight_focused_pane=false
 # Change this to whatever colorscheme you want
 source -q ~/.tmux.conf.dracula.local
 
-conf_icon='OS GOES HERE'
+#conf_icon='   '
+conf_icon='CONFIG OS ICON HERE   '
 
 # terminal title
 #   - built-in variables are:
@@ -34,12 +35,12 @@ conf_icon='OS GOES HERE'
 #     - #{username}
 #     - #{username_ssh}
 tmux_conf_theme_window_status_attr='none'
-tmux_conf_theme_window_status_format='#I #W  #{?window_bell_flag,🔔,}'
+tmux_conf_theme_window_status_format='#W #I #{?window_bell_flag,🔔,}'
 #tmux_conf_theme_window_status_format='#{circled_window_index} #W'
 #tmux_conf_theme_window_status_format='#I #W#{?window_bell_flag,🔔,}#{?window_zoomed_flag,🔍,}'
 
 # window current status style
-#   - built-in variables are:
+#     - built-in variables are:
 #     - #{circled_window_index}
 #     - #{circled_session_name}
 #     - #{hostname}
@@ -49,7 +50,7 @@ tmux_conf_theme_window_status_format='#I #W  #{?window_bell_flag,🔔,}'
 
 tmux_conf_theme_window_status_current_attr='bold'
 #tmux_conf_theme_window_status_current_format='#I #W'
-tmux_conf_theme_window_status_current_format='#I #W '
+tmux_conf_theme_window_status_current_format=' #W #I'
 #tmux_conf_theme_window_status_current_format='#I #W#{?window_zoomed_flag,🔍,}'
 
 # window bell status style
@@ -77,8 +78,8 @@ tmux_conf_theme_pairing_attr='none'
 
 ## Custom Config Options ---- 
 
-tmux_conf_theme_status_left='  #{username}@#{hostname} | #{conf_icon} '
-tmux_conf_theme_status_right=' #I / #{session_windows} |  #{session_name} | #{weather}'
+tmux_conf_theme_status_left=' 💻  #{username}@#{hostname} | #{conf_icon} '
+tmux_conf_theme_status_right=' #I / #{session_windows} |  #{session_name} | #(~/.tmux/weather.sh)'
 
 # Other Plugins
 set -g @plugin 'ChanderG/tmux-notify'
@@ -99,7 +100,6 @@ bind -n M-l select-pane -R
 
 bind-key -n C-h previous-window
 bind-key -n C-l next-window
-bind-key -n C-t new-window
 bind-key -n C-t new-window -c "#{pane_current_path}"
 
 bind-key -n M-0 select-window -t 0
@@ -120,6 +120,5 @@ bind % split-window -h -c "#{pane_current_path}"
 set -g default-terminal "xterm-256color"
 
 # Misc. options
-set -g @dracula-cpu-usage true
 set-option -g status-position top
 set -g mouse on
