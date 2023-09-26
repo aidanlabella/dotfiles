@@ -17,6 +17,7 @@
 
 let g:which_key_map['t'] = {
       \ 'name' : '+tabs' ,
+      \ 'c' : [':tabclose'     , 'close current tab']          ,
       \ 'n' : [':tabnew'     , 'open new tab']          ,
       \ 't' : ['gt'     , 'switch tabs']         ,
       \ 'l' : ['gt'     , 'one tab forward']         ,
