@@ -13,8 +13,8 @@ tmux_conf_theme_highlight_focused_pane=false
 # Change this to whatever colorscheme you want
 source -q ~/.tmux.conf.dracula.local
 
-#conf_icon='   '
-conf_icon='CONFIG OS ICON HERE   '
+#conf_icon='   󱄛'
+conf_icon='CONFIG OS ICON HERE   󱄛'
 
 # terminal title
 #   - built-in variables are:
