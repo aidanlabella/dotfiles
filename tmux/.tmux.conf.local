@@ -79,7 +79,7 @@ tmux_conf_theme_pairing_attr='none'
 ## Custom Config Options ---- 
 
 # Icons: 💻  󰇅   
-tmux_conf_theme_status_left= 💻  #{username}@#{hostname} | #{conf_icon} '
+tmux_conf_theme_status_left= '󰇅 #{username}@#{hostname} | #{conf_icon} '
 tmux_conf_theme_status_right=' #I of #{session_windows} tabs |  #{session_name} | Bat: #{battery_vbar} #{battery_percentage} '
 
 # Other Plugins
@@ -118,6 +118,10 @@ bind % split-window -h -c "#{pane_current_path}"
 
 # TERM Variable
 set -g default-terminal "xterm-256color"
+
+# Linux Clipboard Stuff
+set-option -s set-clipboard off
+bind-key -T copy-mode MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "xclip -selection clipboard -i"
 
 # Misc. options
 set-option -g status-position top
