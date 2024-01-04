@@ -1,6 +1,6 @@
 \set QUIET 1
 \set PROMPT1 '%[%033[1m%]%n  [%/] %# '
-\pset null '¤'
+\pset null '󰟢'
 \timing
 
 \x auto
