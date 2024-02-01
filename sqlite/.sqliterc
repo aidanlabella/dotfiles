@@ -1,0 +1,6 @@
+-- Aidan LaBella
+-- SQLite3 Runtime Configuration
+
+.mode table
+.header on
+.nullvalue '󰟢' 
