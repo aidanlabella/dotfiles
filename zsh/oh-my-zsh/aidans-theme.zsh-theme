@@ -1,4 +1,5 @@
 # Aidan's custom ZSH theme!
+source .oh-my-zsh/custom/plugins/gitstatus.prompt.zsh
 
 function conda_prompt() {
     if [[ -n $CONDA_DEFAULT_ENV && $CONDA_DEFAULT_ENV != "base" ]]; then
@@ -17,7 +18,7 @@ RESET="%{$reset_color%}"
 
 OS_COLOR=$CYAN
 
-PROMPT='$OS_COLOR$OS_ICON $CYAN${str}[%~${str}] $YELLOW $(git_super_status) $BLUE$(conda_prompt)$GREEN $RESET'
+PROMPT='$OS_COLOR$OS_ICON $CYAN${str}[%~${str}] $YELLOW ${GITSTATUS_PROMPT:+ $GITSTATUS_PROMPT} $BLUE$(conda_prompt)$GREEN $RESET'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="$RED "
 ZSH_THEME_GIT_PROMPT_SUFFIX=""

@@ -1,4 +1,4 @@
-# Custom oh-my-tmux config with dracula theme
+
 
 # RGB 24-bit colour support (tmux >= 2.2), possible values are:
 #  - true
@@ -11,10 +11,10 @@ tmux_conf_theme_24b_colour=true
 tmux_conf_theme_highlight_focused_pane=false
 
 # Change this to whatever colorscheme you want
-source -q ~/.tmux.conf.dracula.local
+source -q ~/.tmux.conf.onedark.local
 
 #conf_icon='   󱄛'
-conf_icon='CONFIG OS ICON HERE   󱄛'
+conf_icon=$OS_ICON
 
 # terminal title
 #   - built-in variables are:
@@ -50,7 +50,7 @@ tmux_conf_theme_window_status_format='#W #I #{?window_bell_flag,🔔,}'
 
 tmux_conf_theme_window_status_current_attr='bold'
 #tmux_conf_theme_window_status_current_format='#I #W'
-tmux_conf_theme_window_status_current_format=' #W #I'
+tmux_conf_theme_window_status_current_format='#I #W' 
 #tmux_conf_theme_window_status_current_format='#I #W#{?window_zoomed_flag,🔍,}'
 
 # window bell status style
@@ -79,12 +79,13 @@ tmux_conf_theme_pairing_attr='none'
 ## Custom Config Options ---- 
 
 # Icons: 💻  󰇅   
-tmux_conf_theme_status_left= '󰇅 #{username}@#{hostname} | #{conf_icon} '
-tmux_conf_theme_status_right=' #I of #{session_windows} tabs |  #{session_name} | Bat: #{battery_vbar} #{battery_percentage} '
+tmux_conf_theme_status_left=' 󰇅 #{username}@#{hostname}.cs.brown.edu 🐻 | #{conf_icon} '
+tmux_conf_theme_status_right=' #I of #{session_windows} tabs |  #{session_name}  '
 
 # Other Plugins
 set -g @plugin 'ChanderG/tmux-notify'
 set -g @plugin 'xamut/tmux-weather'
+set -g @plugin 'tmux-plugins/tmux-yank'
 
 set-option -g @tmux-weather-units "u"
 set-option -g @tmux-weather-format "%c+%t+%l"
@@ -120,8 +121,9 @@ bind % split-window -h -c "#{pane_current_path}"
 set -g default-terminal "xterm-256color"
 
 # Linux Clipboard Stuff
-set-option -s set-clipboard off
-bind-key -T copy-mode MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "xclip -selection clipboard -i"
+#set-option -s set-clipboard off
+#set -s copy-command 'wl-copy'
+#bind-key -T copy-mode MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel 'wl-copy'
 
 # Misc. options
 set-option -g status-position top
