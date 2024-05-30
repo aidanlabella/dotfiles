@@ -1,3 +1,5 @@
+# Aidan's custom ZSH theme!
+
 function conda_prompt() {
     if [[ -n $CONDA_DEFAULT_ENV && $CONDA_DEFAULT_ENV != "base" ]]; then
         echo " ($CONDA_DEFAULT_ENV) "
@@ -8,15 +10,16 @@ function conda_prompt() {
 GREEN="%{$fg_bold[green]%}"
 YELLOW="%{$fg_bold[yellow]%}"
 BLUE="%{$fg_bold[blue]%}"
-PINK="%{$fg_bold[pink]%}"
 CYAN="%{$fg_bold[cyan]%}"
 RED="%{$fg_bold[red]%}"
+MAGENTA="%{$fg_bold[magenta]%}"
 RESET="%{$reset_color%}"
-# OS_ICON=""
 
-PROMPT='$OS_ICON $YELLOW%~ $BLUE$(conda_prompt)$RED$(git_prompt_info) $RESET'
+OS_COLOR=$CYAN
 
-ZSH_THEME_GIT_PROMPT_PREFIX="$CYAN "
+PROMPT='$OS_COLOR$OS_ICON $CYAN${str}[%~${str}] $YELLOW $(git_super_status) $BLUE$(conda_prompt)$GREEN $RESET'
+
+ZSH_THEME_GIT_PROMPT_PREFIX="$RED "
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
 ZSH_THEME_GIT_PROMPT_DIRTY=" $RED⦿"
 ZSH_THEME_GIT_PROMPT_CLEAN=" $GREEN⦾"
