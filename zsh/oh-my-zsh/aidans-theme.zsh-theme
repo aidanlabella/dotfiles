@@ -21,7 +21,7 @@ function get_slurm_time_remaining() {
 
 function slurm_prompt() {
     if [[ -n $SLURM_STEP_NODELIST ]]; then
-        echo "$YELLOW  $SLURM_STEP_NODELIST 󰀠 $(get_slurm_time_remaining)"
+        echo "$YELLOW $SLURM_STEP_NODELIST(T-$(get_slurm_time_remaining))"
     fi
 }
 
