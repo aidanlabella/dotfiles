@@ -13,9 +13,15 @@ function git_prompt() {
     fi
 }
 
+function get_slurm_time_remaining() {
+    t="$(squeue -h -j $SLURM_JOBID -o %L)"
+    tf=$(echo "$t"| tr '-' 'd  ')
+    echo "$tf"
+}
+
 function slurm_prompt() {
     if [[ -n $SLURM_STEP_NODELIST ]]; then
-        echo "$YELLOW  $SLURM_STEP_NODELIST"
+        echo "$YELLOW  $SLURM_STEP_NODELIST 󰀠 $(get_slurm_time_remaining)"
     fi
 }
 
