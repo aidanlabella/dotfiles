@@ -36,7 +36,7 @@ RESET="%{$reset_color%}"
 
 OS_COLOR=$MAGENTA
 
-PROMPT='$OS_COLOR$OS_ICON $MAGENTA${str}[%~${str}]$(git_prompt)$BLUE$(conda_prompt)$(slurm_prompt) $GREEN $RESET'
+PROMPT='$OS_COLOR$OS_ICON $MAGENTA${str}[%~${str}]$(git_prompt) $BLUE$(conda_prompt)$(slurm_prompt) $GREEN $RESET'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="$RED "
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
