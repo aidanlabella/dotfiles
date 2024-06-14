@@ -13,6 +13,12 @@ function git_prompt() {
     fi
 }
 
+function slurm_prompt() {
+    if [[ -n $SLURM_STEP_NODELIST ]]; then
+        echo "$YELLOW  $SLURM_STEP_NODELIST"
+    fi
+}
+
 # Update the prompt to include the conda environment
 GREEN="%{$fg_bold[green]%}"
 YELLOW="%{$fg_bold[yellow]%}"
@@ -22,9 +28,9 @@ RED="%{$fg_bold[red]%}"
 MAGENTA="%{$fg_bold[magenta]%}"
 RESET="%{$reset_color%}"
 
-OS_COLOR=$CYAN
+OS_COLOR=$MAGENTA
 
-PROMPT='$OS_COLOR$OS_ICON $CYAN${str}[%~${str}]$(git_prompt) $BLUE$(conda_prompt)$GREEN $RESET'
+PROMPT='$OS_COLOR$OS_ICON $MAGENTA${str}[%~${str}]$(git_prompt)$BLUE$(conda_prompt)$(slurm_prompt) $GREEN $RESET'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="$RED "
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
