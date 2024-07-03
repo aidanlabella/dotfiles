@@ -1,6 +1,6 @@
 "Neovim configruation files
-"Author: Aidan LaBella - RIT Department of Computer Science
-"Email: apl1341@cs.rit.edu 
+"Author: Aidan LaBella - Brown University Department of Computer Science
+"Email: alabella@cs.brown.edu 
 "
 "keybindings/apps/tabs.vim
 "keybindings for tabs and windows
@@ -14,6 +14,11 @@
 "let g:which_key_map['7'] = [ ':7tabnext'  , 'tab 7' ]
 "let g:which_key_map['8'] = [ ':8tabnext'  , 'tab 8' ]
 "let g:which_key_map['9'] = [ ':9tabnext'  , 'tab 9' ]
+let g:which_key_map['b'] = {
+      \ 'name' : '+buffers' ,
+      \ 'p' : [':bprevious'     , 'prev. buffer']          ,
+      \ 'n' : [':bNext'     , 'next buffer']          ,
+\ }
 
 let g:which_key_map['t'] = {
       \ 'name' : '+tabs' ,
