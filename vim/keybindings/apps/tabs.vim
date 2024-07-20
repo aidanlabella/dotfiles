@@ -16,8 +16,9 @@
 "let g:which_key_map['9'] = [ ':9tabnext'  , 'tab 9' ]
 let g:which_key_map['b'] = {
       \ 'name' : '+buffers' ,
-      \ 'p' : [':bprevious'     , 'prev. buffer']          ,
-      \ 'n' : [':bNext'     , 'next buffer']          ,
+      \ 'b' : [':SelBInt'     , 'select buffer']          ,
+      \ 'h' : [':bprevious'     , 'prev. buffer']          ,
+      \ 'l' : [':bNext'     , 'next buffer']          ,
 \ }
 
 let g:which_key_map['t'] = {

@@ -46,7 +46,7 @@ set fillchars+=vert:\
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
-autocmd CursorHold * silent call CocActionAsync('highlight')
+"autocmd CursorHold * silent call CocActionAsync('highlight')
 
 ""use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
