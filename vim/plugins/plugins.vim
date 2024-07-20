@@ -9,6 +9,7 @@
 call plug#begin('~/.vim/plugged')
 
 "put plugins below this line
+Plug 'tpope/vim-vinegar'
 Plug 'uiiaoo/java-syntax.vim'
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
@@ -35,6 +36,7 @@ Plug 'mhinz/vim-startify'
 Plug 'vim-python/python-syntax'
 Plug 'cj/vim-webdevicons'
 Plug 'joshdick/onedark.vim'
+Plug 'aidanlabella/fls.vim'
 
 "No longer used/too buggy
 "Plug 'jiangmiao/auto-pairs'
