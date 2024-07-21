@@ -15,13 +15,14 @@ fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/aidan/.oh-my-zsh"
+export OS_ICON=''
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="aidans-theme"
 
 COMPLETION_WAITING_DOTS="true"
 ENABLE_CORRECTION="true"
 
-source ~/.zsh-syntax-hi-dracula.sh
+source ~/.zsh-syntax-hi-onedark.sh
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
@@ -36,7 +37,7 @@ then
 fi
 
 #Custom commands/modifications
-alias ls='gls --color=auto'
+alias ls='lsd'
 alias bls='/bin/ls --color=auto'
 alias gloo='git log --oneline'
 
@@ -55,6 +56,8 @@ alias dff='cd ~/dotfiles'
 alias csrs='cd ~/RIT/UGRA/D2S2/ngafid2.0/src/main/java/org/ngafid'
 alias csrj='cd ~/RIT/UGRA/D2S2/ngafid2.0/src/main/javascript'
 alias csr='cd ~/RIT/UGRA/D2S2/ngafid2.0'
+alias cr='cd ~/sandbox/swift'
+alias crs='cd ~/sandbox/swift/src/python'
 alias exa='cd ~/RIT/UGRA/D2S2/exact'
 
 ## RIT Machines
@@ -68,24 +71,25 @@ alias nvi='nvim'
 
 ## SSH - Remote Machines
 alias sdt='ssh aidan@aidan-gentbox || ssh aidan@192.168.44.8'
-alias sas='ssh alabella@homeserver || ssh alabella@192.168.1.2'
+alias sas='ssh -XY alabella@homeserver || ssh -XY alabella@192.168.1.2'
 alias sns='ssh ngafid@homeserver || ssh ngafid@192.168.1.2'
-alias stp='ssh aidan@gol2518.labellanetworks.com || ssh aidan@apl-gol-2518.student.rit.edu'
+alias ccv='ssh -XY alabella@ssh.ccv.brown.edu'
+alias ccvc='ssh -XYJ aidan@aidans-archbox alabella@sshcampus.ccv.brown.edu'
+alias ivy='ssh alabella@ssh.cs.brown.edu'
+alias sab='ssh -XY aidan@aidans-archbox || ssh -XYJ alabella@ssh.cs.brown.edu ${AB}'
+alias sas='ssh alabella@homeserver || ssh alabella@192.168.1.2'
+alias sdsl='ssh apl1341@dsl.cs.rit.edu'
+alias sdt='ssh -XY aidan@aidans-pc || ssh -XY aidan@192.168.198.8'
+alias slab='ssh aidan@gol2518-r1.main.ad.rit.edu'
+alias sng='ssh aidan.labella@ngafid.org'
+alias sns='ssh ngafid@homeserver || ssh ngafid@192.168.1.2'
+alias stp='ssh aidan@apl-gol-2518.student.rit.edu'
+alias ssw='ssh -XYJ aidan@aidans-archbox alabella@swift'
 
 ## tmux
 alias t='tmux'
 alias ta='tmux a'
 alias tn='tmux new -s'
-
-## mySQL
-alias ngsql='mycli -u root -p ngafid'
-
-#Env. Vars 
-source ~/RIT/UGRA/D2S2/ngafid2.0/init_env.sh
-
-## MACOS-Specific
-export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-11.0.13.jdk/Contents/Home"
 
 ### Aliases from linux to mac
 alias eix='brew search'
@@ -95,6 +99,24 @@ alias lsblk='diskutil list'
 alias sed='gsed'
 
 pfetch
+
+set -o vi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('~/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "~/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "~/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="~/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

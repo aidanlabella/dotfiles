@@ -4,6 +4,7 @@
 "
 "keybindings/apps/tabs.vim
 "keybindings for tabs and windows
+source $HOME/src/floss.vim/plugin/floss.vim
 
 "let g:which_key_map['1'] = [ ':1tabnext'  , 'tab 1' ]
 "let g:which_key_map['2'] = [ ':2tabnext'  , 'tab 2' ]
@@ -16,9 +17,10 @@
 "let g:which_key_map['9'] = [ ':9tabnext'  , 'tab 9' ]
 let g:which_key_map['b'] = {
       \ 'name' : '+buffers' ,
-      \ 'b' : [':SelBInt'     , 'select buffer']          ,
-      \ 'h' : [':bprevious'     , 'prev. buffer']          ,
-      \ 'l' : [':bNext'     , 'next buffer']          ,
+      \ 'b' : [':SelBInt'     , ' select buffer']          ,
+      \ 'B' : [':Fls'     , ' buffer listing']          ,
+      \ 'h' : [':bprevious'     , '󰒮 prev. buffer']          ,
+      \ 'l' : [':bNext'     , '󰒭 next buffer']          ,
 \ }
 
 let g:which_key_map['t'] = {
