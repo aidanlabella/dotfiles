@@ -37,6 +37,7 @@ Plug 'vim-python/python-syntax'
 Plug 'cj/vim-webdevicons'
 Plug 'joshdick/onedark.vim'
 Plug 'aidanlabella/floss.vim'
+Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
 
 "No longer used/too buggy
 "Plug 'jiangmiao/auto-pairs'

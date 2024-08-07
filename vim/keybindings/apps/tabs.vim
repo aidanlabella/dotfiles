@@ -4,7 +4,6 @@
 "
 "keybindings/apps/tabs.vim
 "keybindings for tabs and windows
-source $HOME/src/floss.vim/plugin/floss.vim
 
 "let g:which_key_map['1'] = [ ':1tabnext'  , 'tab 1' ]
 "let g:which_key_map['2'] = [ ':2tabnext'  , 'tab 2' ]
