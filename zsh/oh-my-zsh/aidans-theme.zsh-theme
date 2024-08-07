@@ -1,6 +1,14 @@
 # Aidan's custom ZSH theme!
 source ~/.oh-my-zsh/custom/plugins/gitstatus/gitstatus.prompt.zsh
 
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+
+function pyenv_prompt() {
+    if [[ -n $PYENV_VERSION ]]; then
+        echo " ($PYENV_VERSION) "
+    fi
+}
+
 function conda_prompt() {
     if [[ -n $CONDA_DEFAULT_ENV && $CONDA_DEFAULT_ENV != "base" ]]; then
         echo " ($CONDA_DEFAULT_ENV) "
@@ -34,9 +42,9 @@ RED="%{$fg_bold[red]%}"
 MAGENTA="%{$fg_bold[magenta]%}"
 RESET="%{$reset_color%}"
 
-OS_COLOR=$MAGENTA
+OS_COLOR=$CYAN
 
-PROMPT='$OS_COLOR$OS_ICON $MAGENTA${str}[%~${str}]$(git_prompt) $BLUE$(conda_prompt)$(slurm_prompt) $GREEN $RESET'
+PROMPT='$OS_COLOR$OS_ICON $CYAN${str}[%~${str}]$(git_prompt) $BLUE$(pyenv_prompt)$(slurm_prompt)$GREEN $RESET'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="$RED "
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
