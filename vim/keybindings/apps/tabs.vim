@@ -29,6 +29,7 @@ let g:which_key_map['t'] = {
       \ 't' : ['gt'     , 'switch tabs']         ,
       \ 'l' : ['gt'     , 'one tab forward']         ,
       \ 'h' : ['gT'    , 'one tab backwards']            ,
+      \ 'k' : [':q'    , 'close tab']            ,
       \ '1' : [':1tabnext'  , 'tab 1' ],
       \ '2' : [':2tabnext'  , 'tab 2' ],
       \ '3' : [':3tabnext'  , 'tab 3' ],
