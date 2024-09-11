@@ -74,7 +74,7 @@ alias sdt='ssh aidan@aidan-gentbox || ssh aidan@192.168.44.8'
 alias sas='ssh -XY alabella@homeserver || ssh -XY alabella@192.168.1.2'
 alias sns='ssh ngafid@homeserver || ssh ngafid@192.168.1.2'
 alias ccv='ssh -XY alabella@ssh.ccv.brown.edu'
-alias ccvc='ssh -XYJ aidan@aidans-archbox alabella@sshcampus.ccv.brown.edu'
+alias ccvc='ssh -XYJ aidan@aidans-archbox,alabella@sshcampus.ccv.brown.edu alabella@login010'
 alias ivy='ssh alabella@ssh.cs.brown.edu'
 alias sab='ssh -XY aidan@aidans-archbox || ssh -XYJ alabella@ssh.cs.brown.edu ${AB}'
 alias sas='ssh alabella@homeserver || ssh alabella@192.168.1.2'
@@ -104,18 +104,21 @@ set -o vi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('~/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-
+__conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "~/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "~/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
     else
-        export PATH="~/miniconda3/bin:$PATH"
+        export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
     fi
 fi
 unset __conda_setup
+
+if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/mamba.sh" ]; then
+    . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/mamba.sh"
+fi
 # <<< conda initialize <<<
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

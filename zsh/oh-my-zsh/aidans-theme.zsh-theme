@@ -17,7 +17,7 @@ function conda_prompt() {
 
 function git_prompt() {
     if [[ -n $GITSTATUS_PROMPT ]]; then
-        echo "$YELLOW ${GITSTATUS_PROMPT:+ $GITSTATUS_PROMPT}"
+        echo "$RED ${GITSTATUS_PROMPT:+ $GITSTATUS_PROMPT}"
     fi
 }
 
@@ -34,6 +34,7 @@ function slurm_prompt() {
 }
 
 # Update the prompt to include the conda environment
+WHITE="%{$fg_bold[white]%}"
 GREEN="%{$fg_bold[green]%}"
 YELLOW="%{$fg_bold[yellow]%}"
 BLUE="%{$fg_bold[blue]%}"
@@ -42,9 +43,9 @@ RED="%{$fg_bold[red]%}"
 MAGENTA="%{$fg_bold[magenta]%}"
 RESET="%{$reset_color%}"
 
-OS_COLOR=$CYAN
+OS_COLOR=$WHITE
 
-PROMPT='$OS_COLOR$OS_ICON $CYAN${str}[%~${str}]$(git_prompt) $BLUE$(pyenv_prompt)$(slurm_prompt)$GREEN $RESET'
+PROMPT='$OS_COLOR$OS_ICON $WHITE${str}[%~${str}]$(git_prompt) $BLUE$(conda_prompt)$(slurm_prompt)$GREEN $RESET'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="$RED "
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
