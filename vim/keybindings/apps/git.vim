@@ -1,6 +1,6 @@
 "Neovim configruation files
-"Author: Aidan LaBella - RIT Department of Computer Science
-"Email: apl1341@cs.rit.edu 
+"Author: Aidan LaBella - Brown of Computer Science
+"Email: alabella@brown.edu
 "
 "keybindings/apps/git.vim
 "keybindings for vcs/git
@@ -27,7 +27,8 @@ let g:which_key_map.g = {
       \ 'P' : [':Git pull'                         , 'pull'],
       \ 'r' : [':GRemove'                          , 'remove'],
       \ 's' : ['<Plug>(GitGutterStageHunk)'        , 'stage hunk'],
-      \ 'S' : [':!git status'                      , 'status'],
+      \ 'S' : [':Git stash'                        , 'stash'],
+      \ 'o' : [':Git stash pop'                    , 'stash pop'],
       \ 't' : [':GitGutterSignsToggle'             , 'toggle signs'],
       \ 'u' : ['<Plug>(GitGutterUndoHunk)'         , 'undo hunk'],
       \ 'v' : [':GV'                               , 'view commits'],
