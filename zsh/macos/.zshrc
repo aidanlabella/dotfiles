@@ -1,6 +1,6 @@
 # zsh runtime configuration
 # macOS
-# Aidan LaBella -- apl1341@cs.rit.edu
+# Aidan LaBella -- alabella@brown.edu
  
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -9,24 +9,7 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
-export ZSH="/Users/aidan/.oh-my-zsh"
-export OS_ICON=''
-
-ZSH_THEME="aidans-theme"
-
-COMPLETION_WAITING_DOTS="true"
-ENABLE_CORRECTION="true"
-
-source ~/.zsh-syntax-hi-onedark.sh
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
-
-source $ZSH/oh-my-zsh.sh
-
+#
 ## Homebrew
 if type brew &>/dev/null
 then
@@ -35,6 +18,35 @@ then
   autoload -Uz compinit
   compinit
 fi
+
+source ~/.aidans_theme.zsh
+
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Path to your oh-my-zsh installation.
+export OS_ICON=''
+export OS_COLOR=$WHITE
+
+source $(brew --prefix)/share/antigen/antigen.zsh
+source ~/.plugins.zsh
+source ~/.zsh-syntax-hi-dracula.sh
+
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen apply
+
+#ZSH_THEME="aidans-theme"
+
+COMPLETION_WAITING_DOTS="true"
+ENABLE_CORRECTION="true"
+
+#source $ZSH/oh-my-zsh.sh
+
+
+export SWIFT_DB_FILE='/Users/aidan/mnt/oscar/data/jpober/shared/mwa_fall_16/sqlite/swift.db'
+alias swsql='litecli ${SWIFT_DB_FILE}'
 
 #Custom commands/modifications
 alias ls='lsd'
@@ -75,6 +87,7 @@ alias sas='ssh -XY alabella@homeserver || ssh -XY alabella@192.168.1.2'
 alias sns='ssh ngafid@homeserver || ssh ngafid@192.168.1.2'
 alias ccv='ssh -XY alabella@ssh.ccv.brown.edu'
 alias ccvc='ssh -XYJ aidan@aidans-archbox,alabella@sshcampus.ccv.brown.edu alabella@login010'
+alias sswa='ssh -XYJ aidan@aidans-archbox,alabella@sshcampus.ccv.brown.edu,alabella@login010 alabella@pswiftcit.services.brown.edu'
 alias ivy='ssh alabella@ssh.cs.brown.edu'
 alias sab='ssh -XY aidan@aidans-archbox || ssh -XYJ alabella@ssh.cs.brown.edu ${AB}'
 alias sas='ssh alabella@homeserver || ssh alabella@192.168.1.2'
@@ -121,5 +134,5 @@ if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/mamba.sh" ]; then
 fi
 # <<< conda initialize <<<
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Set the prompt.
+#source ~/.aidans-theme.zsh
