@@ -78,5 +78,5 @@ precmd_functions+=(get_git_sync_status conda_prompt slurm_prompt)
 setopt prompt_subst
 
 # Set prompt
-PS1='${OS_COLOR}$OS_ICON ${WHITE}[%~]${RESET}${ATH_GIT_PROMPT_STATUS}${GREEN}  ${RESET}'
+PS1='${OS_COLOR}$OS_ICON [%~]${RESET}${ATH_GIT_PROMPT_STATUS}${GREEN}  ${RESET}'
 RPS1='${CYAN}${ATH_CONDA_PROMPT_STATUS}${RED}${ATH_SLURM_PROMPT_STATUS}${YELLOW}󰁥 $(date +"%I:%M:%S %p")${RESET}'
