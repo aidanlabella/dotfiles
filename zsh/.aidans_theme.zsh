@@ -92,11 +92,24 @@ slurm_prompt() {
     fi
 }
 
+function shorten_path() {
+    local path="$1"
+    local shortened
+    shortened="${path/#$HOME/~}" # Replace home with ~
+    shortened="${shortened//\/([^\/])[^\/]*/\/\1}" # Abbreviate intermediate dirs
+    echo "$shortened"
+}
+
 # Register precmd hooks
 precmd_functions+=(get_git_sync_status conda_prompt slurm_prompt)
 
 setopt prompt_subst
 
+local f_cwd="[%~]"
+if [[ -n $ATH_CONDENSE_PROMPT ]]; then
+    f_cwd="[%B%4(~|%-2~/../%1~|%~)]"
+fi
+
 # Set prompt format strings
-PS1='${OS_COLOR}$OS_ICON [%~]${RESET}${ATH_GIT_PROMPT_STATUS}${GREEN}  ${RESET}'
+PS1='${OS_COLOR}$OS_ICON ${f_cwd}${RESET}${ATH_GIT_PROMPT_STATUS}${GREEN}  ${RESET}'
 RPS1='${CYAN}${ATH_CONDA_PROMPT_STATUS}${RED}${ATH_SLURM_PROMPT_STATUS}${YELLOW}󰁥 $(date +"%I:%M:%S %p")${RESET}'
