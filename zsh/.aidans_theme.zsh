@@ -40,17 +40,22 @@ get_git_sync_status() {
         local to_pull=""
 
         if [[ ahead -gt 0 ]]; then
-            to_push=" ${MAGENTA}$ahead"
+            to_push=" ${MAGENTA} $ahead"
         fi
 
         if [[ behind -gt 0 ]]; then
-            to_pull=" ${CYAN}$behind"
+            to_pull=" ${CYAN} $behind"
         fi
 
+        local to_stage=""
         modified=$(git status --porcelain | grep -c '^[ MADRCU]')
 
+        if [[ modified -gt 0 ]]; then
+            to_stage=" ${YELLOW} $modified"
+        fi
+
         if [[ -n $branch ]]; then
-            ATH_GIT_PROMPT_STATUS=" ${ORANGE} [${GREEN} $branch${to_push}${to_pull} ${YELLOW}✎$modified${ORANGE}]"
+            ATH_GIT_PROMPT_STATUS=" ${ORANGE} [${GREEN} $branch${to_push}${to_pull}${to_stage}${ORANGE}]"
         else
             ATH_GIT_PROMPT_STATUS=" ${ORANGE} [!(detached HEAD)]"
         fi
