@@ -3,8 +3,13 @@
 autoload -Uz vcs_info
 autoload -Uz add-zsh-hook
 
+# Enable ZSH internals 
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git:*' formats '(%b)'
+
+# Zsh Line edit (ZLE)
+zle -N zle-keymap-select update_prompt
+zle -N zle-line-init update_prompt
 
 # Define colors (with %{ %} for non-printing sequences)
 WHITE="%{$(echo -e '\e[1;37m')%}"
@@ -92,12 +97,27 @@ slurm_prompt() {
     fi
 }
 
-function shorten_path() {
-    local path="$1"
-    local shortened
-    shortened="${path/#$HOME/~}" # Replace home with ~
-    shortened="${shortened//\/([^\/])[^\/]*/\/\1}" # Abbreviate intermediate dirs
-    echo "$shortened"
+function update_prompt {
+    local prompt_head
+    if [[ $KEYMAP == vicmd ]]; then
+        prompt_head=" "  # Command mode indicator
+
+        if [[ $ZLE_STATE == visual ]]; then
+            prompt_head="󰊪 "  # Visual mode
+        fi
+    else
+        prompt_head=" "  # Insert mode indicator
+    fi
+
+    # Set the prompt while preserving additional elements like the directory
+    # PROMPT="${prompt_head} %~ "  # Adjust this format as needed
+    # PROMPT="%m %~ ${prompt_head}"
+    PS1="$R_SIDE $prompt_head${RESET}"
+    zle reset-prompt
+}
+
+zle-line-init() {
+    update_prompt
 }
 
 # Register precmd hooks
@@ -107,9 +127,10 @@ setopt prompt_subst
 
 local f_cwd="[%~]"
 if [[ -n $ATH_CONDENSE_PROMPT ]]; then
-    f_cwd="[%B%4(~|%-2~/../%1~|%~)]"
+    f_cwd="[%B%4(~|%-2~//%1~|%~)]"
 fi
 
 # Set prompt format strings
-PS1='${OS_COLOR}$OS_ICON ${f_cwd}${RESET}${ATH_GIT_PROMPT_STATUS}${GREEN}  ${RESET}'
+R_SIDE="${OS_COLOR}$OS_ICON ${f_cwd}${RESET}${ATH_GIT_PROMPT_STATUS}${GREEN}"
+PS1='$R_SIDE  ${RESET}'
 RPS1='${CYAN}${ATH_CONDA_PROMPT_STATUS}${RED}${ATH_SLURM_PROMPT_STATUS}${YELLOW}󰁥 $(date +"%I:%M:%S %p")${RESET}'

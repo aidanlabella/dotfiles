@@ -32,11 +32,6 @@ source $(brew --prefix)/share/antigen/antigen.zsh
 source ~/.plugins.zsh
 source ~/.zsh-syntax-hi-dracula.sh
 
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-completions
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen apply
-
 #ZSH_THEME="aidans-theme"
 
 COMPLETION_WAITING_DOTS="true"
