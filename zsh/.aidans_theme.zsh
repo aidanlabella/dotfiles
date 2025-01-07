@@ -11,6 +11,7 @@ zstyle ':vcs_info:git:*' formats '(%b)'
 zle -N zle-keymap-select update_prompt
 zle -N zle-line-init update_prompt
 
+
 # Define colors (with %{ %} for non-printing sequences)
 WHITE="%{$(echo -e '\e[1;37m')%}"
 GREEN="%{$(echo -e '\e[1;32m')%}"
@@ -92,7 +93,7 @@ get_slurm_time_remaining() {
 
 slurm_prompt() {
     if [[ -n $SLURM_STEP_NODELIST ]]; then
-        ATH_SLURM_PROMPT_STATUS="$SLURM_STEP_NODELIST(T-$(get_slurm_time_remaining))"
+        ATH_SLURM_PROMPT_STATUS=" $SLURM_STEP_NODELIST(T-$(get_slurm_time_remaining)) "
     else
         ATH_SLURM_PROMPT_STATUS=""
     fi
