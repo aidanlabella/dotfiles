@@ -26,6 +26,7 @@ RESET="%{$(echo -e '\e[0m')%}"
 typeset -g ATH_GIT_PROMPT_STATUS=""
 typeset -g ATH_CONDA_PROMPT_STATUS=""
 typeset -g ATH_SLURM_PROMPT_STATUS=""
+typeset -g ATH_PROMPT_HEAD=" "
 
 get_git_sync_status() {
     if git rev-parse --is-inside-work-tree &>/dev/null; then
@@ -100,19 +101,15 @@ slurm_prompt() {
 function update_prompt {
     local prompt_head
     if [[ $KEYMAP == vicmd ]]; then
-        prompt_head=" "  # Command mode indicator
+        ATH_PROMPT_HEAD=" "  # Command mode indicator
 
         if [[ $ZLE_STATE == visual ]]; then
-            prompt_head="󰊪 "  # Visual mode
+            ATH_PROMPT_HEAD="󰊪 "  # Visual mode
         fi
     else
-        prompt_head=" "  # Insert mode indicator
+        ATH_PROMPT_HEAD=" "  # Insert mode indicator
     fi
 
-    # Set the prompt while preserving additional elements like the directory
-    # PROMPT="${prompt_head} %~ "  # Adjust this format as needed
-    # PROMPT="%m %~ ${prompt_head}"
-    PS1="$R_SIDE $prompt_head${RESET}"
     zle reset-prompt
 }
 
@@ -131,6 +128,6 @@ if [[ -n $ATH_CONDENSE_PROMPT ]]; then
 fi
 
 # Set prompt format strings
-R_SIDE="${OS_COLOR}$OS_ICON ${f_cwd}${RESET}${ATH_GIT_PROMPT_STATUS}${GREEN}"
-PS1='$R_SIDE  ${RESET}'
-RPS1='${CYAN}${ATH_CONDA_PROMPT_STATUS}${RED}${ATH_SLURM_PROMPT_STATUS}${YELLOW}󰁥 $(date +"%I:%M:%S %p")${RESET}'
+#R_SIDE=""
+PS1='${OS_COLOR}$OS_ICON ${f_cwd}${RESET}${ATH_GIT_PROMPT_STATUS}${GREEN} ${ATH_PROMPT_HEAD}${RESET}'
+RPS1='${CYAN}${ATH_CONDA_PROMPT_STATUS}${MAGENTA}${ATH_SLURM_PROMPT_STATUS}${YELLOW}󰁥 $(date +"%I:%M:%S %p")${RESET}'
