@@ -92,7 +92,7 @@ get_slurm_time_remaining() {
 
 slurm_prompt() {
     if [[ -n $SLURM_STEP_NODELIST ]]; then
-        ATH_SLURM_PROMPT_STATUS="$YELLOW $SLURM_STEP_NODELIST(T-$(get_slurm_time_remaining))"
+        ATH_SLURM_PROMPT_STATUS="$SLURM_STEP_NODELIST(T-$(get_slurm_time_remaining))"
     else
         ATH_SLURM_PROMPT_STATUS=""
     fi
