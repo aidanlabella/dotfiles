@@ -19,6 +19,7 @@ then
   compinit
 fi
 
+export ATH_CONDENSE_PROMPT=1
 source ~/.aidans_theme.zsh
 
 # If you come from bash you might have to change your $PATH.
@@ -30,7 +31,7 @@ export OS_COLOR=$WHITE
 
 source $(brew --prefix)/share/antigen/antigen.zsh
 source ~/.plugins.zsh
-source ~/.zsh-syntax-hi-dracula.sh
+source ~/.zsh-syntax-hi-onedark.sh
 
 #ZSH_THEME="aidans-theme"
 
