@@ -31,7 +31,7 @@ export OS_COLOR=$WHITE
 
 source $(brew --prefix)/share/antigen/antigen.zsh
 source ~/.plugins.zsh
-source ~/.zsh-syntax-hi-onedark.sh
+source ~/.zsh-syntax-hi-dracula.sh
 
 #ZSH_THEME="aidans-theme"
 
@@ -41,7 +41,7 @@ ENABLE_CORRECTION="true"
 #source $ZSH/oh-my-zsh.sh
 
 
-export SWIFT_DB_FILE='/Users/aidan/mnt/oscar/data/jpober/shared/mwa_fall_16/sqlite/swift.db'
+export SWIFT_DB_FILE='/Users/aidan/mnt/oscar/data/jpober/shared/mwa_fall_16_v2/sql/swift.db'
 alias swsql='litecli ${SWIFT_DB_FILE}'
 
 #Custom commands/modifications
@@ -94,6 +94,10 @@ alias sng='ssh aidan.labella@ngafid.org'
 alias sns='ssh ngafid@homeserver || ssh ngafid@192.168.1.2'
 alias stp='ssh aidan@apl-gol-2518.student.rit.edu'
 alias ssw='ssh -XYJ aidan@aidans-archbox alabella@swift'
+
+alias mosc='/Users/aidan/scripts/mount_oscar.sh'
+alias oswt='/Users/aidan/scripts/open_ssh_tunnel_swift.sh'
+alias ocst='/Users/aidan/scripts/open_ssh_tunnel_cs.sh'
 
 ## tmux
 alias t='tmux'
