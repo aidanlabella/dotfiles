@@ -11,27 +11,29 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Plugin Management
-source "${HOME}/.zgen/zgen.zsh"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/aidan/.oh-my-zsh"
+source /usr/share/zsh/share/antigen.zsh
+
+source /home/aidan/.aidans_theme.zsh
+ZSH_THEME="aidans-theme"
+
+export ATH_CONDENSE_PROMPT=0
 
 export OS_ICON="󰣇"
+export OS_COLOR=$CYAN
+export SWIFT_DB_FILE='/oscar/data/jpober/shared/mwa_fall_16_v2/sql/swift.db'
 
 # Plugins, themes
-zgen load jeffreytse/zsh-vi-mode
-ZSH_THEME="aidans-theme"
 
 COMPLETION_WAITING_DOTS="true"
 ENABLE_CORRECTION="true"
 
-source ~/.zsh-syntax-hi-onedark.sh
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions conda)
-
-source $ZSH/oh-my-zsh.sh
+source ~/.plugins.zsh
+source ~/.zsh-syntax-hi-dracula.sh
 #
 #Env. Vars 
 export A='/home/aidan/Brown/Agendas'
@@ -39,6 +41,8 @@ export R='/home/aidan/sandbox/swift'
 export SWDB='/home/aidan/ccv/data/alabella/swift'
 
 #Useful Aliases
+alias p='pwd'
+alias pp='pwd -P'
 alias ls='lsd'
 alias la='ls -la'
 alias ..='cd ..'
@@ -50,13 +54,17 @@ alias c='clear'
 alias update='yay -Syyu'
 alias open='xdg-open'
 alias anon='unset HISTFILE'
+alias mysql='mariadb'
 
 ## Directory Shortcuts
 alias dff='cd ~/dotfiles'
 alias cs='cd ~/Brown/FALL23'
 alias csr='cd ~/Brown/GRA'
-alias sw='cd ~/sandbox/swift'
+alias sw='cd ~/sandbox/swift && conda activate swift_env'
 alias av='cd ~/aidans_vault'
+alias osc='cd /oscar/data/jpober/shared'
+alias cshw='cd ~/Brown/CSCI1760/hw1'
+alias 237='cd ~/Classes/CSCI2370'
 
 ## RIT Machines
 alias styx='ssh apl1341@styx.cs.rit.edu'
@@ -73,7 +81,10 @@ alias sas='ssh alabella@homeserver || ssh alabella@192.168.1.2'
 alias sdt='ssh aidan@aidans-pc || ssh aidan@192.168.198.8'
 alias ivy='ssh alabella@ssh.cs.brown.edu'
 alias ccv='ssh -XY alabella@sshcampus.ccv.brown.edu'
+alias ccvc='ssh -XYJ alabella@sshcampus.ccv.brown.edu alabella@login010'
+alias sswa='ssh -XYJ alabella@sshcampus.ccv.brown.edu,alabella@login010 alabella@pswiftcit.services.brown.edu'
 alias sab='echo Youre already here, dumbass | cowsay'
+alias ssw='ssh alabella@swift'
 
 ## tmux
 alias t='tmux new -s system'
@@ -81,10 +92,14 @@ alias ta='tmux a'
 alias tn='tmux new -s'
 
 alias cr='cd ${R}'
-alias crs='cd ${R}/src/python'
+alias crs='cd ${R}/src/swift; conda activate swift_env;'
 alias cdb='cd ${SWDB}'
+alias cro='cd ~/ccv/sandbox/swift'
 alias csp='cd ~/sandbox/DEEPSPrj'
 alias exa='cd ~/sandbox/exact'
+alias nga='cd ~/sandbox/ngafid2.0'
+alias 15e='sudo /home/aidan/Brown/CSCI1515/devenv/cs1515-run-docker'
+alias rx='export DISPLAY=:0'
 
 alias gloo='git log --oneline'
 
@@ -92,34 +107,25 @@ alias gloo='git log --oneline'
 alias p4bw='lpr -H print.cs.brown.edu -U "not_yours" -P BW4'
 alias p4c='lpr -H print.cs.brown.edu -U "not_yours" -P C4'
 
-# postgreSQL
-# alias swsql='psql -U aidan --dbname=swift_results --port=1341'
+# SQL
+alias swsql='sqlite3 ${SWIFT_DB_FILE}'
 
-export JAVA_HOME='/usr/lib/jvm/java-11-openjdk'
+export JAVA_HOME='/usr/lib/jvm/default'
+export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
 eval "$(pyenv init -)"
 
 source /home/aidan/sandbox/swift/swift.env
 source /home/aidan/.env/sqtex.env
 
+source /home/aidan/sandbox/ngafid2.0/init_env.sh
+
 set -o vi
 
 pfetch
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/usr/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/usr/etc/profile.d/conda.sh" ]; then
-        . "/usr/etc/profile.d/conda.sh"
-    else
-        export PATH="/usr/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
+[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
+
+#eval "$(starship init zsh)"
