@@ -118,6 +118,10 @@ zle-line-init() {
     update_prompt
 }
 
+TRAPZERR() {
+  jobs -l
+}
+
 # Register precmd hooks
 precmd_functions+=(get_git_sync_status conda_prompt slurm_prompt)
 
