@@ -22,3 +22,6 @@ cnoreabbrev Q q
 
 set t_Co=256
 let &t_ut=''
+
+" For CPP @ BrownU
+autocmd FileType cpp setlocal tabstop=2 shiftwidth=2 expandtab
