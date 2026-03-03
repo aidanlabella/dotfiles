@@ -129,7 +129,7 @@ setopt prompt_subst
 
 local f_cwd="[%~]"
 if [[ -n $ATH_CONDENSE_PROMPT ]]; then
-    f_cwd="[%B%4(~|%-2~//%1~|%~)]"
+    f_cwd="[%B%4(~|%-2~/.../%1~|%~)]"
 fi
 
 # Set prompt format strings

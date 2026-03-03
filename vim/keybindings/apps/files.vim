@@ -17,6 +17,7 @@ let g:which_key_map['f'] = {
       \ 'f' : ['FZF'     , 'find file']    ,
       \ 'r' : ['RangerCurrentDirectory'     , 'ranger']    ,
       \ 'R' : ['Ranger'     , 'ranger ~']    ,
-      \ 't' : ['OpenFSplit'     , 'file tree']    ,
+      \ 't' : ['NERDTreeToggle'     , 'file tree']    ,
+      \ 'T' : ['OpenFSplit'     , 'netrw file tree']    ,
       \ 'e' : ['Explore'     , 'explore files']    ,
 \ }
