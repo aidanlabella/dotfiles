@@ -1,9 +1,10 @@
 \set QUIET 1
-\set PROMPT1 '%[%033[1m%]%n  [%/] %# '
+
+\set PROMPT1 '%[\033[0;36m%]  %n on %[\033[1;35m%] %/%[\033[0;36m%] %# %[\033[0m%]'
+
 \pset null '󰟢'
 \timing
 
-\x auto
 \set VERBOSITY verbose
 \set HISTFILE ~/.psql_history- :DBNAME
 \set HISTCONTROL ignoredups
