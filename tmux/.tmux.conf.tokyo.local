@@ -1,0 +1,69 @@
+# window style
+tmux_conf_theme_window_fg='default'
+tmux_conf_theme_window_bg='default'
+
+# focused pane colours:
+tmux_conf_theme_focused_pane_fg='default'
+tmux_conf_theme_focused_pane_bg='#3b4261'               # bg highlight (moon)
+
+# pane border style
+tmux_conf_theme_pane_border_style=thin
+
+# pane borders colours:
+tmux_conf_theme_pane_border='#2f334d'                   # subtle border
+tmux_conf_theme_pane_active_border='#7aa2f7'            # blue (primary accent)
+
+# pane indicator colours
+tmux_conf_theme_pane_indicator='#444a73'
+tmux_conf_theme_pane_active_indicator='#7aa2f7'
+
+# status line message style
+tmux_conf_theme_message_fg='#1e2030'                    # bg
+tmux_conf_theme_message_bg='#82aaff'                    # bright blue
+tmux_conf_theme_message_attr='bold'
+
+# command mode (<prefix> :)
+tmux_conf_theme_message_command_fg='#ff9e64'            # orange
+tmux_conf_theme_message_command_bg='#1e2030'
+tmux_conf_theme_message_command_attr='bold'
+
+# window modes style
+tmux_conf_theme_mode_fg='#1e2030'
+tmux_conf_theme_mode_bg='#e0af68'                       # yellow
+tmux_conf_theme_mode_attr='bold'
+
+# status line base
+tmux_conf_theme_status_fg='#c8d3f5'                     # fg
+tmux_conf_theme_status_bg='#222436'                     # main bg
+tmux_conf_theme_status_attr='none'
+
+tmux_conf_theme_window_status_fg='#c8d3f5'
+tmux_conf_theme_window_status_bg='#222436'
+
+tmux_conf_theme_window_status_current_fg='#1e2030'
+tmux_conf_theme_window_status_current_bg='#7aa2f7'      # blue highlight
+
+# status left
+tmux_conf_theme_status_left_fg='#1e2030,#1e2030,#c8d3f5'
+tmux_conf_theme_status_left_bg='#7aa2f7,#bb9af7,#3b4261'
+tmux_conf_theme_status_left_attr='bold,none,none'
+
+# status right
+tmux_conf_theme_status_right_fg='#1e2030,#c8d3f5,#1e2030'
+tmux_conf_theme_status_right_bg='#9ece6a,#bb9af7,#f7768e'
+tmux_conf_theme_status_right_attr='none,none,bold'
+
+# bell
+tmux_conf_theme_window_status_bell_fg='#e0af68'
+tmux_conf_theme_window_status_bell_bg='default'
+tmux_conf_theme_window_status_bell_attr='blink,bold'
+
+# last window
+tmux_conf_theme_window_status_last_fg='#7aa2f7'
+tmux_conf_theme_window_status_last_bg='default'
+tmux_conf_theme_window_status_last_attr='none'
+
+# activity
+tmux_conf_theme_window_status_activity_fg='default'
+tmux_conf_theme_window_status_activity_bg='default'
+tmux_conf_theme_window_status_activity_attr='underscore'

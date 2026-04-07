@@ -6,5 +6,5 @@
 "configures colorschemes & fonts
 
 
-colorscheme dracula
+colorscheme tokyonight
 set guifont=NotoMono\ Nerd\ Font:h10

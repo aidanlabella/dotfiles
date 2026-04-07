@@ -31,7 +31,7 @@ export OS_COLOR=$WHITE
 
 source $(brew --prefix)/share/antigen/antigen.zsh
 source ~/.plugins.zsh
-source ~/.zsh-syntax-hi-dracula.sh
+source ~/.zsh-syntax-hi-tokyo.sh
 
 #ZSH_THEME="aidans-theme"
 
@@ -65,7 +65,7 @@ alias csrs='cd ~/RIT/UGRA/D2S2/ngafid2.0/src/main/java/org/ngafid'
 alias csrj='cd ~/RIT/UGRA/D2S2/ngafid2.0/src/main/javascript'
 alias csr='cd ~/RIT/UGRA/D2S2/ngafid2.0'
 alias cr='cd ~/sandbox/swift'
-alias crs='cd ~/sandbox/swift/src/python'
+alias crs='cd ~/sandbox/swift/src/swift && conda activate swift_env'
 alias exa='cd ~/RIT/UGRA/D2S2/exact'
 
 ## RIT Machines
@@ -79,14 +79,13 @@ alias nvi='nvim'
 
 ## SSH - Remote Machines
 alias sdt='ssh aidan@aidan-gentbox || ssh aidan@192.168.44.8'
-alias sas='ssh -XY alabella@homeserver || ssh -XY alabella@192.168.1.2'
 alias sns='ssh ngafid@homeserver || ssh ngafid@192.168.1.2'
 alias ccv='ssh -XY alabella@ssh.ccv.brown.edu'
 alias ccvc='ssh -XYJ aidan@aidans-archbox,alabella@sshcampus.ccv.brown.edu alabella@login010'
 alias sswa='ssh -XYJ aidan@aidans-archbox,alabella@sshcampus.ccv.brown.edu,alabella@login010 alabella@pswiftcit.services.brown.edu'
 alias ivy='ssh alabella@ssh.cs.brown.edu'
 alias sab='ssh -XY aidan@aidans-archbox || ssh -XYJ alabella@ssh.cs.brown.edu ${AB}'
-alias sas='ssh alabella@homeserver || ssh alabella@192.168.1.2'
+alias sas='ssh -XY aidan@homeserver || ssh -XY aidan@192.168.1.2'
 alias sdsl='ssh apl1341@dsl.cs.rit.edu'
 alias sdt='ssh -XY aidan@aidans-pc || ssh -XY aidan@192.168.198.8'
 alias slab='ssh aidan@gol2518-r1.main.ad.rit.edu'
