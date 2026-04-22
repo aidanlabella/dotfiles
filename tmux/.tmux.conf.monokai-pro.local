@@ -1,0 +1,70 @@
+# window style
+tmux_conf_theme_window_fg='default'
+tmux_conf_theme_window_bg='default'
+
+# focused pane colours:
+tmux_conf_theme_focused_pane_fg='default'
+tmux_conf_theme_focused_pane_bg='#403e41'               # Monokai Pro background highlight
+
+# pane border style, possible values are:
+#   - thin (default)
+#   - fat
+tmux_conf_theme_pane_border_style=thin
+
+# pane borders colours:
+tmux_conf_theme_pane_border='#727072'                   # Monokai Pro comment gray
+tmux_conf_theme_pane_active_border='#ab9df2'            # Monokai Pro purple
+
+# pane indicator colours
+tmux_conf_theme_pane_indicator='#403e41'                # Monokai Pro selection bg
+tmux_conf_theme_pane_active_indicator='#ab9df2'         # Monokai Pro purple
+
+# status line style
+tmux_conf_theme_message_fg='#2d2a2e'                    # Monokai Pro background
+tmux_conf_theme_message_bg='#ff6188'                    # Monokai Pro pink/red
+tmux_conf_theme_message_attr='bold'
+
+# status line command style (<prefix> : Escape)
+tmux_conf_theme_message_command_fg='#ffd866'            # Monokai Pro yellow
+tmux_conf_theme_message_command_bg='#2d2a2e'            # Monokai Pro background
+tmux_conf_theme_message_command_attr='bold'
+
+# window modes style
+tmux_conf_theme_mode_fg='#2d2a2e'                       # Monokai Pro background
+tmux_conf_theme_mode_bg='#ffd866'                       # Monokai Pro yellow
+tmux_conf_theme_mode_attr='bold'
+
+# status line style
+tmux_conf_theme_status_fg='#fcfcfa'                     # Monokai Pro foreground
+tmux_conf_theme_status_bg='#2d2a2e'                     # Monokai Pro background
+tmux_conf_theme_status_attr='none'
+
+tmux_conf_theme_window_status_fg='#939293'              # Monokai Pro muted gray
+tmux_conf_theme_window_status_bg='#2d2a2e'              # Monokai Pro background
+tmux_conf_theme_window_status_current_fg='#2d2a2e'      # Monokai Pro background
+tmux_conf_theme_window_status_current_bg='#ab9df2'      # Monokai Pro purple
+
+# status left style
+tmux_conf_theme_status_left_fg='#2d2a2e,#fcfcfa,#fcfcfa'   # bg, fg, fg
+tmux_conf_theme_status_left_bg='#a9dc76,#78dce8,#ff6188'   # Monokai Pro green, cyan/blue, pink/red
+tmux_conf_theme_status_left_attr='bold,none,none'
+
+# status right style
+tmux_conf_theme_status_right_fg='#fcfcfa,#fcfcfa,#2d2a2e'  # fg, fg, bg
+tmux_conf_theme_status_right_bg='#fc9867,#ff6188,#ab9df2'  # cyan/blue, pink/red, purple
+tmux_conf_theme_status_right_attr='none,none,bold'
+
+# window bell status style
+tmux_conf_theme_window_status_bell_fg='#ffd866'         # Monokai Pro yellow
+tmux_conf_theme_window_status_bell_bg='default'
+tmux_conf_theme_window_status_bell_attr='blink,bold'
+
+# window last status style
+tmux_conf_theme_window_status_last_fg='#ab9df2'         # Monokai Pro purple
+tmux_conf_theme_window_status_last_bg='default'
+tmux_conf_theme_window_status_last_attr='none'
+
+# window activity status style
+tmux_conf_theme_window_status_activity_fg='default'
+tmux_conf_theme_window_status_activity_bg='default'
+tmux_conf_theme_window_status_activity_attr='underscore'

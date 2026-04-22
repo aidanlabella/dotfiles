@@ -6,5 +6,5 @@
 "configures colorschemes & fonts
 
 
-colorscheme tokyonight
+colorscheme monokai_pro
 set guifont=NotoMono\ Nerd\ Font:h10

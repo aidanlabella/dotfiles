@@ -40,6 +40,7 @@ Plug 'aidanlabella/floss.vim'
 Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'phanviet/vim-monokai-pro'
 
 "No longer used/too buggy
 "Plug 'jiangmiao/auto-pairs'
