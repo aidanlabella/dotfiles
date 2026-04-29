@@ -19,7 +19,7 @@ let g:which_key_map['b'] = {
       \ 'b' : [':SelBInt'     , ' select buffer']          ,
       \ 'B' : [':Fls'     , ' buffer listing']          ,
       \ 'h' : [':bprevious'     , '󰒮 prev. buffer']          ,
-      \ 'l' : [':bNext'     , '󰒭 next buffer']          ,
+      \ 'l' : [':bnext'     , '󰒭 next buffer']          ,
 \ }
 
 let g:which_key_map['t'] = {
